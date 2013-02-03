@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block body %}
-    <div class="hero-unit">
-        Welcome to the CET
-    </div>
-{% endblock %}
