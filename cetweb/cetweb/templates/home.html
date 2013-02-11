@@ -3,7 +3,51 @@
 {% block head_title %}Home{% endblock %}
 
 {% block body %}
-    <div class="hero-unit">
-        Welcome to the CET
-    </div>
+	<div class="row">
+		<div class="twelve columns">
+			<div id="featuredContent" style="width:980px">
+				<div>
+			    	<h4>Welcome to CET</h4>
+			    	<p>Each slide holds arbitrary content, like text or actions.</p>
+			  	</div>
+			  	<div>
+			    	<h4>We can include text and buttons, like this!</h4>
+			    	<p>We take no responsibility for what happens if you click this button.</p>
+			    	<p><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a></p>
+			  	</div>
+			  	<div>
+			    	<h4>What? You did not click it?</h4>
+			    	<p>We give you the benefit of the doubt. Maybe you did, and now you are back!</p>
+			  	</div>
+			</div>
+		</div>
+
+		<div class="twelve columns">
+			<section class="four columns">
+				<h6><strong>Success Story 1</strong></h6>
+				<a href="#" class="th"><img src="http://images.ted.com/images/ted/17630_254x191.jpg"></a>
+				<p>Story 1 is awesome and really awesome but it really is awesome. What is wrong here? Critique please.</p>
+			</section>
+			<section class="four columns">
+				<h6><strong>Success Story 2</strong></h6>
+				<a href="#" class="th"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RichardBransonVAOCApr09.jpg/220px-RichardBransonVAOCApr09.jpg"></a>
+				<p>Story 1 is awesome and really awesome but it really is awesome. Just saying that this is awesome. </p>
+			</section>
+			<section class="four columns">
+				<h6><strong>Success Story 3</strong></h6>
+				<a href="#" class="th"><img src="http://blogs-images.forbes.com/carminegallo/files/2012/10/richard-branson-1.jpg"></a>
+				<p>Story 1 is awesome and really awesome but it really is awesome. And we are out of words. Lorem ipsum ....</p>
+			</section>
+		</div>
+
+		
+	</div>
+
+    <script type='text/javascript'>
+	   $(window).load(function() {
+	       $('#featuredContent').orbit({ fluid: '16x9' });
+	   });
+	</script>
 {% endblock %}
+
+
