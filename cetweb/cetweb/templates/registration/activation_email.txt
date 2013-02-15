@@ -1,0 +1,2 @@
+{% load url %}
+Please activate your account! {% url registration_activate activation_key %}.

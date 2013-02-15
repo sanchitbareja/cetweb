@@ -118,7 +118,8 @@ INSTALLED_APPS = (
 
     #external
     'south',
-    "debug_toolbar",
+    'debug_toolbar',
+    'registration',
 
     #project
     'profiles',
@@ -157,8 +158,12 @@ LOGGING = {
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
 
-#debug toolbar
+#debug_debug_toolbar
 INTERNAL_IPS = ('127.0.0.1',)
+INTERCEPT_REDIRECTS = False
+
+#django_registration
+ACCOUNT_ACTIVATION_DAYS = 7
 
 #project
 STAKEHOLDERS = (
