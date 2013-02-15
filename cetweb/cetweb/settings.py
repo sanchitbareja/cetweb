@@ -171,3 +171,4 @@ STAKEHOLDERS = (
     ("mentor","Mentor"),
 )
 STAKEHOLDER_DEFAULT = "founder"
+AUTH_PROFILE_MODULE = "profiles.Profile"
