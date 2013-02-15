@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', direct_to_template, {"template":"home.html"}, name='home'),
+    url(r'^about/$', direct_to_template, {"template":"about.html"}, name='about'),
     # url(r'^cetweb/', include('cetweb.foo.urls')),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
