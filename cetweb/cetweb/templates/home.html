@@ -3,24 +3,58 @@
 {% block head_title %}Home{% endblock %}
 
 {% block body %}
-	<div class="row">
-		<div class="twelve columns">
-			<div id="featuredContent" style="width:980px">
-				<div>
-			    	<h4>Welcome to CET</h4>
-			    	<p>Each slide holds arbitrary content, like text or actions.</p>
-			  	</div>
-			  	<div>
-			    	<h4>We can include text and buttons, like this!</h4>
-			    	<p>We take no responsibility for what happens if you click this button.</p>
-			    	<p><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a></p>
-			  	</div>
-			  	<div>
-			    	<h4>What? You did not click it?</h4>
-			    	<p>We give you the benefit of the doubt. Maybe you did, and now you are back!</p>
-			  	</div>
+	<style type="text/css">
+
+		#featuredContentDiv{
+			background: #00ACCC; /* for non-css3 browsers */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#096095', endColorstr='#00ACCC'); /* for IE */
+			background: -webkit-gradient(linear, left top, left bottom, from(#096095), to(#00ACCC)); /* for webkit browsers */
+			background: -moz-linear-gradient(top,  #096095,  #00ACCC); /* for firefox 3.6+ */
+			padding-top:30px;
+		}
+
+		#featuredContentLeft{
+			background-color:rgba(100,100,100,0.3);
+			height: 100%;
+		}
+	</style>
+
+	<div class="twelve columns" id="featuredContentDiv">
+		<div class="row">
+			<div class="two columns" id="featuredContentLeft">
+				<ul class="side-nav">
+				  	<li><h4><a href="#"><i class="foundicon-adult"></i>&nbsp;Students</a></h4></li>
+				  	<li><h4><a href="#"><i class="foundicon-asl"></i>&nbsp;Founders</a></h4></li>
+				  	<li><h4><a href="#"><i class="foundicon-network"></i>&nbsp;Investors</a></h4></li>
+				  	<li><h4><a href="#"><i class="foundicon-glasses"></i>&nbsp;Industry</a></h4></li>
+				</ul>
+
+				<a class="round success button" href="#">Get Invite</a>
+				<br /><br /><br />
 			</div>
+			<div class="ten columns">
+				<div id="featuredContent">
+					<div>
+				    	<h2 style="color:white;">Get ready, set, go.</h2>
+				    	<h4>Take courses and receive mentorship at<br /> the UC Berkeley CET and bring your startup<br /> dream to life.</h4>
+				  	</div>
+				  	<div>
+				    	<h4>We can include text and buttons, like this!</h4>
+				    	<p>We take no responsibility for what happens if you click this button.</p>
+				    	<p><a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Rock My World!</a></p>
+				  	</div>
+				  	<div>
+				    	<h4>What? You did not click it?</h4>
+				    	<p>We give you the benefit of the doubt. Maybe you did, and now you are back!</p>
+				  	</div>
+				</div>
+			</div>
+			
 		</div>
+	</div>
+
+	<div class="row">
+		
 
 		<div class="twelve columns">
 			<section class="four columns">
@@ -45,7 +79,7 @@
 
     <script type='text/javascript'>
 	   $(window).load(function() {
-	       $('#featuredContent').orbit({ fluid: '16x9' });
+	       $('#featuredContent').orbit({ fluid: '16x5', directionalNav: false, bullets:false });
 	   });
 	</script>
 {% endblock %}

@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', direct_to_template, {"template":"home.html"}, name='home'),
     url(r'^users/', include('profiles.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^about/$', direct_to_template, {"template":"about.html"}, name='about'),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

@@ -20,12 +20,26 @@
             <link href="{% static "foundation/stylesheets/foundation.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/app.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/social_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/general_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/general_enclosed_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/accessibility_foundicons.css" %}" rel="stylesheet">
 
             <!--[if lt IE 8]>
                 <link rel="stylesheet" href="stylesheets/social_foundicons_ie7.css">
             <![endif]-->
 
             {% block extra_style %}{% endblock %}
+            <style type="text/css">
+                .top-bar{
+                    margin-bottom: 0px;
+                    background-color:white;
+                    border-bottom: 1px solid black;
+                }
+
+                .top-bar ul > li a:not(.button) {
+                    color:black;
+                }
+            </style>
         {% endblock %}
 
         <!-- HTML5 shim, for IE6-8 support of HTML elements -->
@@ -50,13 +64,13 @@
 
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
         {% block topbar_base %}
-            <nav class="top-bar">
+            <nav class="top-bar fixed">
               <ul>
                 <!-- Title Area -->
                 <li class="name">
                   <h1>
                     <a href="#">
-                      CET Web
+                      <img src="{% static "images/cet_logo.png" %}" style="height:100%;"/>
                     </a>
                   </h1>
                 </li>
@@ -65,10 +79,10 @@
 
               <section>
                 <!-- Left Nav Section -->
-                <ul class="left">
+               <!--  <ul class="left">
                   <li class="divider"></li>
                   <li class="has-dropdown">
-                    <a class="active" href="#">Item 1</a>
+                    <a class="active" href="#">About US</a>
                     <ul class="dropdown">
                       <li><label>Section Name</label></li>
                       <li class="has-dropdown">
@@ -101,13 +115,17 @@
                     </ul>
                   </li>
                   <li class="divider hide-for-small"></li>
-                </ul>
+                </ul> -->
 
                 <!-- Right Nav Section -->
                 <ul class="right">
+                    <li class="divider show-for-medium-and-up"></li>
+                    <li><a class="round button" href="#">Login</a></li>
+                </ul>
+                <ul class="right">
                   <li class="divider show-for-medium-and-up"></li>
                   <li class="has-dropdown">
-                    <a href="#">Item 2</a>
+                    <a href="#">Global Programs</a>
                     <ul class="dropdown">
                       <li><label>Section Name</label></li>
                       <li><a href="#" class="">Level 1</a></li>
@@ -123,6 +141,45 @@
                     </ul>
                   </li>
                 </ul>
+                <ul class="right">
+                  <li class="divider show-for-medium-and-up"></li>
+                  <li class="has-dropdown">
+                    <a href="#">Curriculum</a>
+                    <ul class="dropdown">
+                      <li><label>Section Name</label></li>
+                      <li><a href="#" class="">Level 1</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li class="divider"></li>
+                      <li><label>Section Name</label></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">See all &rarr;</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="right">
+                  <li class="divider show-for-medium-and-up"></li>
+                  <li class="has-dropdown">
+                    <a href="#">About Us</a>
+                    <ul class="dropdown">
+                      <li><label>Section Name</label></li>
+                      <li><a href="#" class="">Level 1</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li class="divider"></li>
+                      <li><label>Section Name</label></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li><a href="#">Dropdown Option</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">See all &rarr;</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
               </section>
             </nav>
 
@@ -145,7 +202,7 @@
                     <h6><strong>Using Foundation?</strong></h6>
                     <p>Let us know how you're using Foundation and we might feature you as an example! <a href="mailto:foundation@zurb.com?subject=I'm%20using%20Foundation">Get in touch →</a></p>
                 </section>
-                
+
                 <section class="four columns">
                     <h6><strong>Need some help?</strong></h6>
                     <p>For answers or help visit the <a href="support.php">Support page</a>.</p>
