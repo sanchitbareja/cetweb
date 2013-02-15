@@ -104,6 +104,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    #django
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -112,6 +113,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+
+    #external
+    'south',
+
+    #project
+    'profiles',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -146,3 +153,10 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
+
+#project
+STAKEHOLDERS = (
+    ("founder","Founder"),
+    ("mentor","Mentor"),
+)
+STAKEHOLDER_DEFAULT = "founder"
