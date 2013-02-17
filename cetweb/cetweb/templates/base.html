@@ -119,10 +119,10 @@
                 <!-- Right Nav Section -->
                 <ul class="right">
                     <li class="divider show-for-medium-and-up"></li>
-                    {% if user.is_authenticate %}
-                        <li><a class="round button" href="{% url auth_login %}">Login</a></li>
-                    {% else %}
+                    {% if user.is_authenticated %}
                         <li><a class="round button" href="{% url auth_logout %}">Logout</a></li>
+                    {% else %}
+                        <li><a class="round button" href="{% url auth_login %}">Login</a></li>
                     {% endif %}
                 </ul>
                 <ul class="right">
