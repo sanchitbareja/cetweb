@@ -64,124 +64,7 @@
 
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
         {% block topbar_base %}
-            <nav class="top-bar fixed">
-              <ul>
-                <!-- Title Area -->
-                <li class="name">
-                  <h1>
-                    <a href="#">
-                      <img src="{% static "images/cet_logo.png" %}" style="height:100%;"/>
-                    </a>
-                  </h1>
-                </li>
-                <li class="toggle-topbar"><a href="#"></a></li>
-              </ul>
-
-              <section>
-                <!-- Left Nav Section -->
-               <!--  <ul class="left">
-                  <li class="divider"></li>
-                  <li class="has-dropdown">
-                    <a class="active" href="#">About US</a>
-                    <ul class="dropdown">
-                      <li><label>Section Name</label></li>
-                      <li class="has-dropdown">
-                        <a href="#" class="">Level 1, Has Dropdown</a>
-                        <ul class="dropdown">
-                          <li><a href="#">Level 2</a></li>
-                          <li><a href="#">Level 2</a></li>
-                          <li class="has-dropdown"><a href="#">Level 2, Has Dropdown</a>
-                            <ul class="dropdown">
-                              <li><label>Section</label></li>
-                              <li><a href="#">Level 3</a></li>
-                              <li><a href="#">Level 3</a></li>
-                              <li class="divider"></li>
-                              <li><a href="#">Level 3</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">Level 2</a></li>
-                          <li><a href="#">Level 2</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Level 1</a></li>
-                      <li><a href="#">Level 1</a></li>
-                      <li class="divider"></li>
-                      <li><label>Section Name</label></li>
-                      <li><a href="#">Level 1</a></li>
-                      <li><a href="#">Level 1</a></li>
-                      <li><a href="#">Level 1</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">See all &rarr;</a></li>
-                    </ul>
-                  </li>
-                  <li class="divider hide-for-small"></li>
-                </ul> -->
-
-                <!-- Right Nav Section -->
-                <ul class="right">
-                    <li class="divider show-for-medium-and-up"></li>
-                    <li><a class="round button" href="#">Login</a></li>
-                </ul>
-                <ul class="right">
-                  <li class="divider show-for-medium-and-up"></li>
-                  <li class="has-dropdown">
-                    <a href="#">Global Programs</a>
-                    <ul class="dropdown">
-                      <li><label>Section Name</label></li>
-                      <li><a href="#" class="">Level 1</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><label>Section Name</label></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">See all &rarr;</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <ul class="right">
-                  <li class="divider show-for-medium-and-up"></li>
-                  <li class="has-dropdown">
-                    <a href="#">Curriculum</a>
-                    <ul class="dropdown">
-                      <li><label>Section Name</label></li>
-                      <li><a href="#" class="">Level 1</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><label>Section Name</label></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">See all &rarr;</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <ul class="right">
-                  <li class="divider show-for-medium-and-up"></li>
-                  <li class="has-dropdown">
-                    <a href="#">About Us</a>
-                    <ul class="dropdown">
-                      <li><label>Section Name</label></li>
-                      <li><a href="#" class="">Level 1</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><label>Section Name</label></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li><a href="#">Dropdown Option</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">See all &rarr;</a></li>
-                    </ul>
-                  </li>
-                </ul>
-
-              </section>
-            </nav>
+            
 
         {% endblock %}
 
@@ -191,47 +74,22 @@
             {% endblock %}
         {% endblock %}
 
+        
+
+
+
+
+
+
+
+
+
+
         {% block footer_base %}
-            <!-- <footer class="row">
-                <section class="four columns">
-                    <h6><strong>Made by ZURB</strong></h6>
-                    <p>Foundation is made by <a href="http://www.zurb.com/">ZURB</a>, a product design company in Campbell, California. We've put more than 14 years of experience building web products, services and websites into this framework. <a href="../about.php">Foundation Info and Goodies →</a></p>
-                </section>
-
-                <section class="four columns">
-                    <h6><strong>Using Foundation?</strong></h6>
-                    <p>Let us know how you're using Foundation and we might feature you as an example! <a href="mailto:foundation@zurb.com?subject=I'm%20using%20Foundation">Get in touch →</a></p>
-                </section>
-
-                <section class="four columns">
-                    <h6><strong>Need some help?</strong></h6>
-                    <p>For answers or help visit the <a href="support.php">Support page</a>.</p>
-                    <ul class="inline-list">
-                        <li>
-                            <a href="http://www.facebook.com/" target="_blank"><i class="foundicon-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plusone.google.com/" target="_blank"><i class="foundicon-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.twitter.com/" target="_blank"><i class="foundicon-twitter"></i></a>
-                        </li>
-                    </ul>
-                </section>
-            </footer> -->
-
             <div id="copyright">
                 <div class="row">
                     <div class="four columns">
                         <p>Site content © 2013 CET, inc.</p>
-                    </div>
-                    <div class="eight columns">
-                        <ul class="inline-list right">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Download</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">About</a></li>
-                      </ul>
                     </div>
                 </div>
             </div>
@@ -245,8 +103,16 @@
                 }
             </style>
         {% endblock %}
+
+
+
+
+
+
+
         {% block extra_body_base %}
-            {% block extra_body %}{% endblock %}
+            {% block extra_body %}
+            {% endblock %}
         {% endblock %}
     </body>
 </html>
