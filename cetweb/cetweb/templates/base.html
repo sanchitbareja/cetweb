@@ -63,10 +63,90 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
+        
+
+
         {% block topbar_base %}
-            
+
+
+        <nav class="top-bar">
+          <ul>
+            <li class="name"><h1><a href="#">CET</a></h1></li>
+            <li class="toggle-topbar"><a href="#"></a></li>
+          </ul>
+          <section>
+            <ul class="right">
+              <li class="has-dropdown">
+                <a href="#">About Us</a>
+                <ul class="dropdown">            
+                  <li><a href="#">d1</a></li>
+                  <li><a href="#">d2</a></li>
+                  <li><a href="#">d3</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">Certificate</a>
+                <ul class="dropdown">            
+                  <li><a href="#">d1</a></li>
+                  <li><a href="#">d2</a></li>
+                  <li><a href="#">d3</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">Global Programs</a>
+                <ul class="dropdown">            
+                  <li><a href="#">d1</a></li>
+                  <li><a href="#">d2</a></li>
+                  <li><a href="#">d3</a></li>
+                </ul>
+              </li>
+              <span id="signin">
+                <a id="singnin-link" href="#">Sign in</a>
+              </span>
+              <style type="text/css">
+                    #signin {padding: 0px 40px 0px 200px;}
+                    #singnin-link:hover {text-decoration: underline;}
+              </style>
+            </ul>
+          </section>
+        </nav>
+
+          <!-- Other elements for Top Bar -->
+          <!--    
+          <li class="divider"></li>
+
+          <li class="search">
+            <form class="collapse">
+              <input type="text">
+              <button type="submit" class="secondary radius button">Search</button>
+            </form>
+          </li>
+
+          <li class="search">
+            <form>
+              <input type="search">
+            </form>
+          </li>
+
+          <li class="has-button">
+            <a class="small button" href="#">Button!</a>
+          </li>  
+          -->  
 
         {% endblock %}
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
         {% block body_base %}
             {% include "_messages.html" %}
@@ -86,20 +166,53 @@
 
 
         {% block footer_base %}
-            <div id="copyright">
-                <div class="row">
-                    <div class="four columns">
-                        <p>Site content © 2013 CET, inc.</p>
-                    </div>
-                </div>
+          <div class="twelve columns" id="site-footer">
+            <div class="four columns">
+                <h2>Navigation</h2>
+                <p><a href="#">Privacy</a></p>
+                <p><a href="#">FAQs</a></p>
+                <p><a href="#">Contact us</a></p>
+                <p><a href="#">Our blog</a></p> 
             </div>
+            <div class="four columns">
+                <h2>Social</h2>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Youtube channel</a></p>
+                <p><a href="#">RSS</a></p> 
+            </div>
+            <div class="four columns">
+                <h2>More</h2>
+                <p><a href="#">More 1</a></p>
+                <p><a href="#">More 2</a></p> 
+            </div>
+            <div class="twelve columns" id="copyright">
+              <p>Site content © 2013 CET, inc.</p>
+            </div>
+          </div>
+            
 
             <style type="text/css">
+                #site-footer {
+                  background-color: #383834;
+                  color: #cecec6;
+                  padding: 30px 0;
+                }
+                #site-footer h2 {
+                  color: white;
+                  font-size: 22px;
+                  margin-bottom: 15px;
+                  font-weight: 400;
+                }
+                #site-footer a {
+                  color: #cecec6;
+                  text-shadow: 1px 1px 0 rgba(0,0,0,0.75);
+                }
+                #site-footer a:hover {
+                  text-decoration: underline;
+                }
                 #copyright {
-                    background: #3f3f3f;
-                    color: #fff;
-                    padding: 11px 0;
-                    margin-top: 30px;
+                  color: #141414;
                 }
             </style>
         {% endblock %}
