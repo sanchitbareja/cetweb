@@ -167,24 +167,26 @@
 
         {% block footer_base %}
           <div class="twelve columns" id="site-footer">
-            <div class="four columns">
-                <h2>Navigation</h2>
-                <p><a href="#">Privacy</a></p>
-                <p><a href="#">FAQs</a></p>
-                <p><a href="#">Contact us</a></p>
-                <p><a href="#">Our blog</a></p> 
-            </div>
-            <div class="four columns">
-                <h2>Social</h2>
-                <p><a href="#">Facebook</a></p>
-                <p><a href="#">Twitter</a></p>
-                <p><a href="#">Youtube channel</a></p>
-                <p><a href="#">RSS</a></p> 
-            </div>
-            <div class="four columns">
-                <h2>More</h2>
-                <p><a href="#">More 1</a></p>
-                <p><a href="#">More 2</a></p> 
+            <div class="row">
+              <div class="four columns">
+                  <h2>Navigation</h2>
+                  <p><a href="#">Privacy</a></p>
+                  <p><a href="#">FAQs</a></p>
+                  <p><a href="#">Contact us</a></p>
+                  <p><a href="#">Our blog</a></p> 
+              </div>
+              <div class="four columns">
+                  <h2>Social</h2>
+                  <p><a href="#">Facebook</a></p>
+                  <p><a href="#">Twitter</a></p>
+                  <p><a href="#">Youtube channel</a></p>
+                  <p><a href="#">RSS</a></p> 
+              </div>
+              <div class="four columns">
+                  <h2>More</h2>
+                  <p><a href="#">More 1</a></p>
+                  <p><a href="#">More 2</a></p> 
+              </div>
             </div>
             <div class="twelve columns" id="copyright">
               <p>Site content © 2013 CET, inc.</p>
@@ -196,7 +198,8 @@
                 #site-footer {
                   background-color: #383834;
                   color: #cecec6;
-                  padding: 30px 0;
+                  padding: 30px 0 0 0;
+                  margin-top: 100px;
                 }
                 #site-footer h2 {
                   color: white;
@@ -227,5 +230,6 @@
             {% block extra_body %}
             {% endblock %}
         {% endblock %}
+
     </body>
 </html>
