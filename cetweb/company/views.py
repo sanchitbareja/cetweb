@@ -26,7 +26,7 @@ def job_listing(request,pk):
 
 def job_listing_list(request):
     """
-        Displays a job listing.
+        Displays all job listings.
     """
     jobs = Job.objects.all()
     return render_to_response("company/job_listing_list.html",{"jobs":jobs},context_instance=RequestContext(request))
@@ -40,7 +40,7 @@ def create_company(request):
     """
     form = CompanyForm()
     if request.method == "POST":
-        form = CompanyForm(request.POST)
+        form = CompanyForm(request.POST,request.FILES)
         if form.is_valid():
             company = form.save()
             return HttpResponseRedirect(reverse("company_profile",args=(company.pk,)))
@@ -60,6 +60,7 @@ def create_job(request,company_pk=None):
     if request.method == "POST":
         form = JobForm(request.POST)
         if form.is_valid():
+            #check that this person is a member of the company
             if request.user not in form.instance.company.members.all():
                 messages.error(request,"Cannot create job listings for a company that you are not part of.")
                 return render_to_response("company/job_form.html",{"form":form},context_instance=RequestContext(request))
