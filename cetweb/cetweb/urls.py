@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^company/', include('company.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^about/$', direct_to_template, {"template":"about.html"}, name='about'),
+    url(r'^comments/', include('django.contrib.comments.urls')),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

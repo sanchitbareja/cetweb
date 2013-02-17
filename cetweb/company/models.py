@@ -8,6 +8,7 @@ class Company(models.Model):
     members = models.ManyToManyField(User,blank=True)
     image = models.ImageField(upload_to="company_images",null=True,blank=True)
     pitch = models.TextField(default="",blank=True)
+    video = models.URLField(null=True,blank=True,verbose_name="Video to pitch your idea")
 
     def __unicode__(self):
         return self.name

@@ -115,6 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.comments',
 
     #external
     'south',
@@ -125,6 +126,7 @@ INSTALLED_APPS = (
     #project
     'profiles',
     'company',
+    'events',
 )
 
 # A sample logging configuration. The only tangible logging
