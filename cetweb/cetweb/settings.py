@@ -120,9 +120,11 @@ INSTALLED_APPS = (
     'south',
     'debug_toolbar',
     'registration',
+    'django_extensions',
 
     #project
     'profiles',
+    'company',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,7 +162,9 @@ DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cet
 
 #debug_debug_toolbar
 INTERNAL_IPS = ('127.0.0.1',)
-INTERCEPT_REDIRECTS = False
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
 
 #django_registration
 ACCOUNT_ACTIVATION_DAYS = 7
@@ -169,6 +173,7 @@ ACCOUNT_ACTIVATION_DAYS = 7
 STAKEHOLDERS = (
     ("founder","Founder"),
     ("mentor","Mentor"),
+    ("investor","Investor"),
 )
 STAKEHOLDER_DEFAULT = "founder"
 AUTH_PROFILE_MODULE = "profiles.Profile"
