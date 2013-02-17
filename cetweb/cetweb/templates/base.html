@@ -30,13 +30,62 @@
 
             {% block extra_style %}{% endblock %}
             <style type="text/css">
-                .top-bar{
+                #base-top-bar {
                     margin-bottom: 0px;
-                    background-color:white;
-                    border-bottom: 1px solid black;
-                }
-
-                .top-bar ul > li a:not(.button) {
+                    background: white;
+                    border-bottom: none;
+                    background: white; min-height: 60px; line-height: 60px; margin: 0 0 0px 0; padding: 0; width: 100%; position: relative; /* Contain width to .row width */ /* First <ul> for branding, title, name, etc */ /* topbar global <ul> styles */ }
+                .contain-to-grid #base-top-bar { max-width: 940px; margin: 0 auto; }
+                #base-top-bar > ul .name h1 { line-height: 60px; margin: 0; }
+                #base-top-bar > ul .name h1 a { font-weight: bold; padding: 0 22.5px; font-size: 17px !important; }
+                #base-top-bar > ul .name img { margin-top: -5px; vertical-align: middle; }
+                #base-top-bar.expanded { height: inherit; }
+                #base-top-bar ul { margin-left: 0; display: inline; height: 60px; line-height: 60px; list-style: none; /* Main Navigation links style */ /* Left Side <ul> */ /* Right Side <ul> */ }
+                #base-top-bar ul > li { float: left; /* Dividers between navigation */ /* Put a button in an <li> but give is a class */ /* Put a search bar or text input in the bar */ /* Put login bar in the top bar */ /* Hide the triangle for breakpoint menu */ /* li.has-dropdown */ }
+                #base-top-bar ul > li a:not(.button) { color: white; display: block; font-size: 13px; font-weight: bold; height: 60px; line-height: 60px; padding: 0 15px; }
+                #base-top-bar ul > li:not(.name):hover, #base-top-bar ul > li:not(.name).active, #base-top-bar ul > li:not(.name):focus { background: black; }
+                #base-top-bar ul > li:not(.name):hover a, #base-top-bar ul > li:not(.name).active a, #base-top-bar ul > li:not(.name):focus a { color: #d9d9d9; }
+                #base-top-bar ul > li.divider { background: black; -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1); height: 100%; margin-right: 1px; width: 1px; }
+                #base-top-bar ul > li.has-button a.button { margin: 0 11.25px; }
+                #base-top-bar ul > li.has-button:hover, #base-top-bar ul > li.has-button:focus { background: #cccccc; }
+                #base-top-bar ul > li.has-button:hover a, #base-top-bar ul > li.has-button:focus a { color: #fff; }
+                #base-top-bar ul > li.search { padding: 0 15px; }
+                #base-top-bar ul > li.search form { display: inline-block; margin-bottom: 0; vertical-align: middle; width: 200px; }
+                #base-top-bar ul > li.search form input[type=text] { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; border-bottom-right-radius: 0; float: left; font-size: 13px; margin-top: -1px; height: 22.5px; margin-bottom: 0; width: 130px; }
+                #base-top-bar ul > li.search form input[type=text] + .button { border-left: none; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; float: left; font-size: 12px; margin-top: -1px; padding: 5px 12px 4px; }
+                #base-top-bar ul > li.search form input[type=search] { font-size: 16px; margin-bottom: 0; }
+                #base-top-bar ul > li.search:hover, #base-top-bar ul > li.search:focus { background: #cccccc; }
+                #base-top-bar ul > li.login { padding: 0 15px; }
+                #base-top-bar ul > li.login form { display: inline-block; margin-bottom: 0; vertical-align: middle; width: 300px; }
+                #base-top-bar ul > li.login form input { float: left; width: auto; font-size: 13px; margin-top: -1px; height: 22.5px; margin-bottom: 0; }
+                #base-top-bar ul > li.login form input[type=text] { -moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0; -moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; border-bottom-right-radius: 0; width: 120px; }
+                #base-top-bar ul > li.login form input[type=password] { margin-bottom: 0; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; width: 120px; }
+                #base-top-bar ul > li.login form input[type=password] + .button { border-left: none; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topright: 2px; -webkit-border-top-right-radius: 2px; border-top-right-radius: 2px; -moz-border-radius-bottomright: 2px; -webkit-border-bottom-right-radius: 2px; border-bottom-right-radius: 2px; float: left; font-size: 12px; margin-top: -1px; padding: 5px 12px 4px; width: 60px; }
+                #base-top-bar ul > li.login:hover, #base-top-bar ul > li.login:focus { background: #cccccc; }
+                #base-top-bar ul > li.toggle-topbar { display: none; }
+                #base-top-bar ul > li.has-dropdown { position: relative; /* Dropdown Level 2+ */ }
+                #base-top-bar ul > li.has-dropdown:hover > .dropdown, #base-top-bar ul > li.has-dropdown:focus > .dropdown { display: block; visibility: visible; }
+                #base-top-bar ul > li.has-dropdown a { padding-right: 33.75px; }
+                #base-top-bar ul > li.has-dropdown a:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: white transparent transparent transparent; margin-right: 15px; margin-top: -2.5px; position: absolute; right: 0; top: 50%; }
+                #base-top-bar ul > li.has-dropdown .dropdown { background: #cccccc; left: 0; margin: 0; padding: 9px 0 0 0; position: absolute; visibility: hidden; z-index: 99; }
+                #base-top-bar ul > li.has-dropdown .dropdown li { background: #cccccc; line-height: 1; min-width: 100%; padding-bottom: 5px; }
+                #base-top-bar ul > li.has-dropdown .dropdown li a { color: white; font-weight: normal; height: 100%; line-height: 1; padding: 5px 17px 5px 15px; white-space: nowrap; }
+                #base-top-bar ul > li.has-dropdown .dropdown li a:after { border: none; }
+                #base-top-bar ul > li.has-dropdown .dropdown li a:hover, #base-top-bar ul > li.has-dropdown .dropdown li a:focus { background: #3c3c3c; }
+                #base-top-bar ul > li.has-dropdown .dropdown li label { color: #6f6f6f; font-size: 10px; font-weight: bold; margin: 0; padding-left: 15px; text-transform: uppercase; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.divider { border-top: solid 1px black; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset; height: 10px; padding: 0; width: 100%; }
+                #base-top-bar ul > li.has-dropdown .dropdown li:last-child { padding-bottom: 10px; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.active a { background: black; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.has-dropdown > a { padding-right: 30px; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.has-dropdown > a:after { border: none; content: "\00bb"; right: 5px; top: 6px; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.has-dropdown .dropdown { position: absolute; left: 100%; top: 0; }
+                #base-top-bar ul > li.has-dropdown .dropdown li.has-dropdown:hover > .dropdown, #base-top-bar ul > li.has-dropdown .dropdown li.has-dropdown:focus > .dropdown { display: block; }
+                #base-top-bar ul.left { float: left; width: auto; margin-bottom: 0; }
+                #base-top-bar ul.right { float: right; width: auto; margin-bottom: 0; /* Dropdown Right Side Alignment */ }
+                #base-top-bar ul.right .has-dropdown .dropdown { left: auto; right: 0px; }
+                #base-top-bar ul.right .has-dropdown .dropdown li.has-dropdown > .dropdown { right: 100%; left: auto; width: 100%; }
+                #base-top-bar .js-generated { display: none; }
+                #base-top-bar ul > li a:not(.button) {
                     color:black;
                 }
             </style>
@@ -69,7 +118,7 @@
         {% block topbar_base %}
 
 
-        <nav class="top-bar">
+        <nav class="top-bar" id="base-top-bar">
           <ul>
             <li class="name"><h1><a href="#">CET</a></h1></li>
             <li class="toggle-topbar"><a href="#"></a></li>
