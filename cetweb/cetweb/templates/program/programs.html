@@ -1,0 +1,10 @@
+{% extends "program/base.html" %}
+
+{% block body %}
+    {% for program in programs %}
+        <h1><a href="{{program.get_absolute_url}}">Program: {{program.name}}</a></h1>
+        {% if not forloop.last %}
+            <hr />
+        {% endif %}
+    {% endfor %}
+{% endblock %}
