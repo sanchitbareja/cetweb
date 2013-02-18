@@ -102,14 +102,82 @@
                 <!-- Right Nav Section -->
                 <ul class="right">
                     {% if user.is_authenticated %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">Log out</a></li>
+                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">(Log out)</a></li>
                     {% else %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">Log in</a></li>
+                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">(Log in)</a></li>
                     {% endif %}
                 </ul>
                 <ul class="right">
+                  <li class="has-dropdown">
+                      <a class="active" href="#">About us</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Mission</a></li>
+                        <li><a href="#" class="">History</a></li>
+                        <li><a href="#" class="">Team</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="has-dropdown">
+                      <a class="active" href="#">International</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Startup@Berkeley</a></li>
+                        <li><a href="#" class="">Tsinghua-Berkeley GTE Center</a></li>
+                        <li><a href="#" class="">Syndicated Programs</a></li>
+                      </ul>
+                  </li>
+                  <li class="has-dropdown">
+                      <a class="active" href="#">Programs</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">CET Certificate</a></li>
+                        <li><a href="#" class="">Venture Lab</a></li>
+                        <li><a href="#" class="">Teach the Teachers</a></li>
+                        <li><a href="#" class="">Research @ Fung Institute</a></li>
+                      </ul>
+                  </li>
                   <li>
-                    <a href="#">Global Programs</a>
+                      <a class="active" href="#">(Companies)</a>
+                  </li>
+                  <li>
+                      <a class="active" href="#">(Events)</a>
+                  </li>
+                  <li class="has-dropdown">
+                      <a class="active" href="#">(Get Involved)</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Mentors</a></li>
+                        <li><a href="#" class="">faculty</a></li>
+                        <li><a href="#" class="">Alumni</a></li>
+                        <li><a href="#" class="">Philantropy</a></li>
+                        <li><a href="#" class="">Sponsors</a></li>
+                      </ul>
+                  </li>
+                </ul>
+
+
+                      <!-- <a class="active" href="#">About us</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Mission</a></li>
+                        <li><a href="#" class="">History</a></li>
+                        <li><a href="#" class="">Team</a></li>
+                      </ul>
+
+                        <li><a href="#">Level 1</a></li>
+                        <li><a href="#">Level 1</a></li>
+                        <li class="divider"></li>
+                        <li><label>Section Name</label></li>
+                        <li><a href="#">Level 1</a></li>
+                        <li><a href="#">Level 1</a></li>
+                        <li><a href="#">Level 1</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">See all &rarr;</a></li>
+                      
+                  </li>
+                </ul> -->
+
+                
+<!-- 
+                <ul class="right">
+                  <li>
+                    <a href="#">About us</a>
                   </li>
                 </ul>
                 <ul class="right">
@@ -121,7 +189,7 @@
                   <li>
                     <a href="#">About Us</a>
                   </li>
-                </ul>
+                </ul> -->
 
               </section>
             </nav>
