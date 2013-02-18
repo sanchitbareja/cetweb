@@ -19,10 +19,16 @@
             <link href="{% static "foundation/stylesheets/app.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/custom.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/social_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/general_enclosed_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/accessibility_foundicons.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/general_foundicons.css" %}" rel="stylesheet">
             <!--[if lt IE 8]>
                 <link rel="stylesheet" href="{% static "foundation/stylesheets/social_foundicons_ie7.css" %}">
+                <link rel="stylesheet" href="{% static "foundation/stylesheets/general_enclosed_foundicons_ie7.css" %}">
+                <link rel="stylesheet" href="{% static "foundation/stylesheets/accessibility_foundicons_ie7.css" %}">
+                <link rel="stylesheet" href="{% static "foundation/stylesheets/general_foundicons_ie7.css" %}">
             <![endif]-->
-
+            
             {% block extra_style %}{% endblock %}
         {% endblock %}
 

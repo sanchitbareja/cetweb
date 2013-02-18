@@ -2,6 +2,12 @@
 {% load i18n %}
 {% load url from future %}
 
+<link href="{% static "foundation/stylesheets/social_foundicons.css" %}" rel="stylesheet">
+<!--[if lt IE 8]>
+    <link rel="stylesheet" href="{% static "foundation/stylesheets/social_foundicons_ie7.css" %}">
+<![endif]-->            
+
+
 <div id="copyright">
 	<div class="row">
 
@@ -25,10 +31,10 @@
 	    <section class="four columns">
 	        <h4>Need some help?</h4>
 	        <ul class="inline-list" id="social_icons">
-        		<li><h2><a href="http://www.facebook.com/"><i class="foundicon-facebook"></i></a></h2></li>
-			  	<li><h2><a href="http://www.twitter.com/"><i class="foundicon-twitter"></i></a></h2></li>
-			  	<li><h2><a href="http://www.wordpress.com"><i class="foundicon-wordpress"></i></a></h2></li>
-			  	<li><h2><a href="http://www.youtube.com"><i class="foundicon-youtube"></i></a></h2></li>
+        		<li><h2><a href="http://www.facebook.com/"><i class="social foundicon-facebook"></i></a></h2></li>
+			  	<li><h2><a href="http://www.twitter.com/"><i class="social foundicon-twitter"></i></a></h2></li>
+			  	<li><h2><a href="http://www.wordpress.com"><i class="social foundicon-wordpress"></i></a></h2></li>
+			  	<li><h2><a href="http://www.youtube.com"><i class="social foundicon-youtube"></i></a></h2></li>
 	        </ul>
 	        <ul class="side-nav">
 	        	<li><a href="#">Terms and Conditions</a></li>

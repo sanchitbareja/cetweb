@@ -45,6 +45,19 @@
 	height: 80px;
 }
 
+/* Footer styling */
+
+#social_icons a{
+	color: white;
+}
+
+#copyright {
+	background: #505050;
+	color: #fff;
+	padding: 11px 0;
+	margin-top: 30px;
+}
+
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
@@ -57,25 +70,18 @@
 ----------------------------------------- */
 
 #featuredContentDiv{
-	background: #00ACCC; /* for non-css3 browsers */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#098095', endColorstr='#00ACCC'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#098095), to(#00ACCC)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #098095,  #00ACCC); /* for firefox 3.6+ */
-	padding-top:30px;
+	background: #035A8F;
+	padding-top: 0px;
 }
 
-#featuredContentLeft{
-	background-color:rgba(100,100,100,0.3);
+#featuredContentRight{
+	background-color:rgba(200,200,200,0.5);
 	height: 100%;
 }
 
-#social_icons a{
-	color: white;
-}
-
-#copyright {
-	background: #646464;
-	color: #fff;
-	padding: 11px 0;
-	margin-top: 30px;
+#featuredContentRightStakeholders{
+	color: #eee;
+	text-align: center;
+	line-height:50px;
+	font-size:50px;
 }
