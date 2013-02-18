@@ -1,0 +1,10 @@
+{% extends "events/base.html" %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block body %}
+    {% placeholder event_name %}
+    {% block event_name %}
+        <h1>Event: {{event.name}}</h1>
+    {% endblock %}
+    <img src="{{event.image.url}}" />
+{% endblock %}

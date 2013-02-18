@@ -1,0 +1,21 @@
+{% extends "company/base.html" %}
+{% load comments %}
+
+{% block body %}
+    <h1>Name: {{company.name}}</h1>
+    {% if user in company.members.all %}
+        <a href="{% url job_create company.pk %}">Create Job Listing</a>
+    {% endif %}
+    {% for job in company.job_set.all %}
+        {% if forloop.first %}
+            <h1>Job listings</h1>
+        {% endif %}
+        <a href="{{job.get_absolute_url}}">{{job.title}}</a>
+    {% endfor %}
+    <h1>Comments</h1>
+    {% get_comment_form for company as form %}
+    {% url company_profile company.pk as next %}
+    {% include "comments/form.html" %}
+    <hr />
+    {% render_comment_list for company %}
+{% endblock %}

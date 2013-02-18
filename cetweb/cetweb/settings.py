@@ -117,6 +117,7 @@ LANGUAGES = [
 ]
 
 INSTALLED_APPS = (
+    #django
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -126,6 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
 
+    #cms
     'cms',
     'mptt',
     'menus',
@@ -142,6 +144,14 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.video',
     'cms.plugins.twitter',
+
+    #external
+    'registration',
+
+    #project
+    'profiles',
+    'company',
+    'events',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -176,3 +186,15 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb_cms')}
+
+#django-registration
+ACCOUNT_ACTIVATION_DAYS = 7
+
+#project
+STAKEHOLDERS = (
+    ("founder","Founder"),
+    ("mentor","Mentor"),
+    ("investor","Investor"),
+)
+STAKEHOLDER_DEFAULT = "founder"
+AUTH_PROFILE_MODULE = "profiles.Profile"

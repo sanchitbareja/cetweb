@@ -6,6 +6,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
+    url(r'^users/', include('profiles.urls')),
+    url(r'^events/', include('events.urls')),
+    url(r'^accounts/profile/$', 'profiles.views.profile'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('cms.urls')),
 )
 
