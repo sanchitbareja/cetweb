@@ -18,8 +18,9 @@
         {% block style_base %}
             <link href="{% static "foundation/stylesheets/app.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/custom.css" %}" rel="stylesheet">
+            <link href="{% static "foundation/stylesheets/social_foundicons.css" %}" rel="stylesheet">
             <!--[if lt IE 8]>
-                <link rel="stylesheet" href="stylesheets/social_foundicons_ie7.css">
+                <link rel="stylesheet" href="{% static "foundation/stylesheets/social_foundicons_ie7.css" %}">
             <![endif]-->
 
             {% block extra_style %}{% endblock %}
@@ -102,30 +103,59 @@
                 <!-- Right Nav Section -->
                 <ul class="right">
                     {% if user.is_authenticated %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">Log out</a></li>
+                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">(Log out)</a></li>
                     {% else %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">Log in</a></li>
+                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">(Log in)</a></li>
                     {% endif %}
                 </ul>
                 <ul class="right">
-                  <li>
-                    <a href="#">Global Programs</a>
+                  <li class="has-dropdown">
+                      <a class="active" href="#">About us</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Mission</a></li>
+                        <li><a href="#" class="">History</a></li>
+                        <li><a href="#" class="">Team</a></li>
+                      </ul>
                   </li>
-                </ul>
-                <ul class="right">
-                  <li>
-                    <a href="#">Curriculum</a>
-                  </li>
-                </ul>
-                <ul class="right">
-                  <li>
-                    <a href="#">About Us</a>
-                  </li>
-                </ul>
 
+                  <li class="has-dropdown">
+                      <a class="active" href="#">International</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Startup@Berkeley</a></li>
+                        <li><a href="#" class="">Tsinghua-Berkeley GTE Center</a></li>
+                        <li><a href="#" class="">Syndicated Programs</a></li>
+                      </ul>
+                  </li>
+                  <li class="has-dropdown">
+                      <a class="active" href="#">Programs</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">CET Certificate</a></li>
+                        <li><a href="#" class="">Venture Lab</a></li>
+                        <li><a href="#" class="">Teach the Teachers</a></li>
+                        <li><a href="#" class="">Research @ Fung Institute</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="active" href="#">(Companies)</a>
+                  </li>
+                  <li>
+                      <a class="active" href="#">(Events)</a>
+                  </li>
+                  <li class="has-dropdown">
+                      <a class="active" href="#">(Get Involved)</a>
+                      <ul class="dropdown">
+                        <li><a href="#" class="">Mentors</a></li>
+                        <li><a href="#" class="">faculty</a></li>
+                        <li><a href="#" class="">Alumni</a></li>
+                        <li><a href="#" class="">Philantropy</a></li>
+                        <li><a href="#" class="">Sponsors</a></li>
+                      </ul>
+                  </li>
+                </ul>
               </section>
             </nav>
           </div>
+          {% include "_account_bar.html" %}
 
         {% endblock %}
 
@@ -136,49 +166,7 @@
         {% endblock %}
 
         {% block footer_base %}
-            <!-- <footer class="row">
-                <section class="four columns">
-                    <h6><strong>Made by ZURB</strong></h6>
-                    <p>Foundation is made by <a href="http://www.zurb.com/">ZURB</a>, a product design company in Campbell, California. We've put more than 14 years of experience building web products, services and websites into this framework. <a href="../about.php">Foundation Info and Goodies →</a></p>
-                </section>
-
-                <section class="four columns">
-                    <h6><strong>Using Foundation?</strong></h6>
-                    <p>Let us know how you're using Foundation and we might feature you as an example! <a href="mailto:foundation@zurb.com?subject=I'm%20using%20Foundation">Get in touch →</a></p>
-                </section>
-
-                <section class="four columns">
-                    <h6><strong>Need some help?</strong></h6>
-                    <p>For answers or help visit the <a href="support.php">Support page</a>.</p>
-                    <ul class="inline-list">
-                        <li>
-                            <a href="http://www.facebook.com/" target="_blank"><i class="foundicon-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plusone.google.com/" target="_blank"><i class="foundicon-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="http://www.twitter.com/" target="_blank"><i class="foundicon-twitter"></i></a>
-                        </li>
-                    </ul>
-                </section>
-            </footer> -->
-
-            <div id="copyright">
-                <div class="row">
-                    <div class="four columns">
-                        <p>Site content © 2013 CET, inc.</p>
-                    </div>
-                    <div class="eight columns">
-                        <ul class="inline-list right">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Download</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">About</a></li>
-                      </ul>
-                    </div>
-                </div>
-            </div>
+            {% include "_footer.html" %}
         {% endblock %}
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}
