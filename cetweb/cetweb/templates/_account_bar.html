@@ -47,10 +47,9 @@
                   <li class="has-dropdown">
                       <a class="active" href="#">Programs</a>
                       <ul class="dropdown">
-                        <li><a href="#" class="">CET Certificate</a></li>
-                        <li><a href="#" class="">Venture Lab</a></li>
-                        <li><a href="#" class="">Teach the Teachers</a></li>
-                        <li><a href="#" class="">Research @ Fung Institute</a></li>
+                        {% for program in programs %}
+                        <li><a href="{{program.get_absolute_url}}" class="">{{program.name}}</a></li>
+                        {% endfor %}
                       </ul>
                   </li>
                   <li>
