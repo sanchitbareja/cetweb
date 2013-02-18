@@ -9,7 +9,7 @@
 // and uncommenting what you want below. You must uncomment the following if customizing
 
 // @import "compass/css3";
-// @import "foundation/settings";
+@import "foundation/settings";
 // @import "foundation/functions/all";
 
 // Control which mixins you have access too
@@ -40,7 +40,7 @@
 // @import "foundation/components/modules/buttons";
 // @import "foundation/components/modules/tabs";
 // @import "foundation/components/modules/ui";
-// @import "foundation/components/modules/topbar";
+@import "foundation/components/modules/topbar";
 // @import "foundation/components/modules/navbar";
 // @import "foundation/components/modules/orbit";
 // @import "foundation/components/modules/reveal";

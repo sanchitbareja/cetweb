@@ -1,23 +1,45 @@
+{% load static from staticfiles %}
 {% load i18n %}
 
-<div class="pull-right">
-    <ul class="nav pull-right">
-        {% if user.is_authenticated %}
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    {{ user }}
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="{% url auth_logout %}"><i class="icon-user"></i> {% trans "Logout" %}</a></li>
-                </ul>
-            </li>
-        {% else %}
-            <li>
-                <a href="{% url registration_register %}">
-                    {% trans "Log in or Sign Up" %}
-                </a>
-			</li>
-        {% endif %}
-    </ul>
+<div class="fixed">
+    <nav class="top-bar">
+      <ul>
+        <!-- Title Area -->
+        <li class="name">
+              <a href="{% url home %}">
+                  <img src="{% static "images/CET_logo1.png" %}" id="cet_logo"/>
+            </a>
+        </li>
+        <li class="toggle-topbar"><a href="#"></a></li>
+      </ul>
+
+      <section>
+        <!-- Left Nav Section -->
+        
+        <!-- Right Nav Section -->
+        <ul class="right">
+            {% if user.is_authenticated %}
+                <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">Log out</a></li>
+            {% else %}
+                <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">Log in</a></li>
+            {% endif %}
+        </ul>
+        <ul class="right">
+          <li>
+            <a href="#">Global Programs</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li>
+            <a href="#">Curriculum</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li>
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+
+      </section>
+    </nav>
 </div>

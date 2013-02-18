@@ -38,3 +38,4 @@ site_media
 *~
 
 .DS_Store
+.sass-cache/*
