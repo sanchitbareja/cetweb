@@ -159,8 +159,21 @@ LOGGING = {
 }
 
 #dj_database_url
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
+if os.environ.has_key('DATABASE_URL'):
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'cetweb',                      # Or path to database file if using sqlite3.
+            'USER': 'postgres',                      # Not used with sqlite3.
+            'PASSWORD': 'root',                  # Not used with sqlite3.
+            'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        }
+    }
+
 
 #debug_debug_toolbar
 INTERNAL_IPS = ('127.0.0.1',)

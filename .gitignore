@@ -36,3 +36,5 @@ whoosh_index
 site_media
 *.swp
 *~
+
+.DS_Store
