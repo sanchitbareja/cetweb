@@ -47,15 +47,32 @@
 
 /* Footer styling */
 
+#site-footer {
+  z-index: 100;
+  /*background-color: #383834;*/
+  color: #cecec6;
+  padding: 30px 0 0 0;
+  margin-top: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#383834), to(#41413c));
+}
+#site-footer h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+#site-footer a {
+  color: #cecec6;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.75);
+}
+#site-footer a:hover {
+  text-decoration: underline;
+}
 #social_icons a{
 	color: white;
 }
-
 #copyright {
-	background: #505050;
-	color: #fff;
-	padding: 11px 0;
-	margin-top: 30px;
+  color: #141414;
 }
 
 /* -----------------------------------------
