@@ -14,35 +14,61 @@
 ----------------------------------------- */
 
 /*top-bar customization */
-
 .top-bar{
     margin-bottom: 0px;
     border-bottom: 1px solid black;
     box-shadow: 0px 2px 10px black;
 }
-
-.top-bar ul{
+.top-bar ul {
 }
-
-.top-bar ul > li a:not(.button) {
-    color:white;
+.top-bar #log {
+	color: #011b2b;
+	margin-right: 30px;
+	margin-left: 20px;
+}
+.top-bar #log:hover {
+	text-decoration: underline;
 }
 
 /* top-bar: Mobile view customization for */
-
 .top-bar ul > li.toggle-topbar a {
 	border-color: black transparent transparent transparent;
 }
-
 .top-bar.expanded ul li.toggle-topbar a {
 	border-color: transparent transparent black transparent;
 }
 
-
 /* CET logo styling */
-
 #cet_logo {
 	height: 80px;
+}
+
+/* Footer styling */
+#site-footer {
+  z-index: 100;
+  color: #cecec6;
+  padding: 30px 0 0 0;
+  margin-top: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#383834), to(#41413c));
+}
+#site-footer h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+#site-footer a {
+  color: #cecec6;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.75);
+}
+#site-footer a:hover {
+  text-decoration: underline;
+}
+#social_icons a{
+	color: white;
+}
+#copyright {
+  color: #141414;
 }
 
 /* -----------------------------------------
@@ -57,25 +83,18 @@
 ----------------------------------------- */
 
 #featuredContentDiv{
-	background: #00ACCC; /* for non-css3 browsers */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#098095', endColorstr='#00ACCC'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#098095), to(#00ACCC)); /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #098095,  #00ACCC); /* for firefox 3.6+ */
-	padding-top:30px;
+	background: #035A8F;
+	padding-top: 0px;
 }
 
-#featuredContentLeft{
-	background-color:rgba(100,100,100,0.3);
+#featuredContentRight{
+	background-color:rgba(200,200,200,0.5);
 	height: 100%;
 }
 
-#social_icons a{
-	color: white;
-}
-
-#copyright {
-	background: #646464;
-	color: #fff;
-	padding: 11px 0;
-	margin-top: 30px;
+#featuredContentRightStakeholders{
+	color: #eee;
+	text-align: center;
+	line-height:50px;
+	font-size:50px;
 }

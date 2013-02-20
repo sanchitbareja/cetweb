@@ -3,20 +3,10 @@
 {% block head_title %}Home{% endblock %}
 
 {% block body %}
-	<div class="twelve columns" id="featuredContentDiv">
+	<div id="featuredContentDiv">
 		<div class="row">
-			<div class="two columns" id="featuredContentLeft">
-				<ul class="side-nav">
-				  	<li><h4><a href="#"><i class="foundicon-facebook"></i>&nbsp;Students</a></h4></li>
-				  	<li><h4><a href="#"><i class="foundicon-twitter"></i>&nbsp;Founders</a></h4></li>
-				  	<li><h4><a href="#"><i class="foundicon-wordpress"></i>&nbsp;Investors</a></h4></li>
-				  	<li><h4><a href="#"><i class="foundicon-youtube"></i>&nbsp;Industry</a></h4></li>
-				</ul>
-
-				<a class="round success button" href="#">Get Invite</a>
-				<br /><br /><br />
-			</div>
-			<div class="ten columns">
+			
+			<div class="eight columns">
 				<div id="featuredContent">
 					<div>
 				    	<h2 style="color:white;">Get ready, set, go.</h2>
@@ -32,6 +22,20 @@
 				    	<p>We give you the benefit of the doubt. Maybe you did, and now you are back!</p>
 				  	</div>
 				</div>
+			</div>
+
+			<div class="four columns" id="featuredContentRight">
+				<h4>The CET Network</h4>
+				<p>The one & only Berkeley startup network for founders, alumni, investors, & mentors.</p>
+				<ul class="inline-list">
+					<li><a href="#"><div id="featuredContentRightStakeholders"><i class="general-enclosed foundicon-smiley"></i></div><div style="color:black;">Students</div></a></li>
+				  	<li><a href="#"><div id="featuredContentRightStakeholders"><i class="general-enclosed foundicon-idea"></i></div><div style="color:black;">Founders</div></a></li>
+				  	<li><a href="#"><div id="featuredContentRightStakeholders"><i class="general-enclosed foundicon-address-book"></i></div><div style="color:black;">Investors</div></a></li>
+				  	<li><a href="#"><div id="featuredContentRightStakeholders"><i class="accessibility foundicon-glasses"></i></div><div style="color:black;">Industry</div></a></li>
+				</ul>
+				<ul class="side-nav">
+					<li><a class="round success button" href="#">Get Invite</a></li>			  				  	
+				</ul>							
 			</div>
 			
 		</div>
@@ -63,7 +67,7 @@
 
     <script type='text/javascript'>
 	   $(window).load(function() {
-	       $('#featuredContent').orbit({ fluid: '16x5', directionalNav: false, bullets:false });
+	       $('#featuredContent').orbit({ fluid: '16x5', directionalNav: false, bullets:true, bulletsThumbs:true });
 	   });
 	</script>
 {% endblock %}

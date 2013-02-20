@@ -21,9 +21,9 @@
               <section>
                 <ul class="right">
                     {% if user.is_authenticated %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_logout %}">(Log out)</a></li>
+                        <a href="{% url auth_logout %}" id="log">(Log out)</a>
                     {% else %}
-                        <li class="has-button"><a class="secondary round button medium" href="{% url auth_login %}">(Log in)</a></li>
+                        <a href="{% url auth_login %}" id="log">(Log in)</a>
                     {% endif %}
                 </ul>
                 <ul class="right">
