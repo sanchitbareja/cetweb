@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+
+{% block body %}
+
+
+<div class="twelve columns">
+	<div class="three columns" id="left-container">
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+
+
+
+{% block one_page_nav %}
+<!-- <script src="{% static "foundation/javascripts/onepagenav/jquery.nav.js" %}"></script>
+<script src="{% static "foundation/javascripts/onepagenav/jquery.scrollTo.js" %}"></script>
+<script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script> -->
+<script src='http://trevordavis.net/play/jquery-one-page-nav/jquery.js'></script>
+<script src='http://trevordavis.net/play/jquery-one-page-nav/jquery.scrollTo.js'></script>
+<script src='http://trevordavis.net/play/jquery-one-page-nav/jquery.nav.min.js'></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#left-navbar').onePageNav();
+  });
+</script>
+<!-- ascensor.js plugin -->
+<!-- <script src='http://kirkas.ch/ascensor/js/libs/jquery-1.8.0.min.js'></script>
+<script src='http://kirkas.ch/ascensor/js/plugins.js'></script>
+<script src='http://kirkas.ch/ascensor/js/jquery.ascensor.js'></script>
+<script src='http://kirkas.ch/ascensor/js/script.js'></script>
+<script src="text/javascript"></script> -->
+{% endblock %}
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

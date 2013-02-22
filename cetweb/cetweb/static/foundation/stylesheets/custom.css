@@ -105,3 +105,41 @@ blockquote.milestone {
 	line-height:50px;
 	font-size:50px;
 }
+
+
+/* -----------------------------------------
+   Static Pages
+----------------------------------------- */
+
+#left-container {
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  /*height: 100%;*/
+  background: gray;
+}
+#left-navbar {
+  /*position: absolute;*/
+  background: white;
+  text-align: center;
+  border-radius: 5px;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+  top:50%;
+  list-style-type: none;
+  padding: 0;
+}
+#left-navbar li {
+  padding: 10px;
+}
+#left-navbar .current {
+  background: lightgray;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
