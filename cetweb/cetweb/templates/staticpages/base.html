@@ -5,10 +5,16 @@
 {% block body %}
 
 
-<div class="twelve columns">
+<div class="">
 	<div class="three columns" id="left-container">
-		{% block content %}
+		{% block left_content %}
 		{% endblock %}
+	</div>
+	<div class="nine columns" id="right-container">
+		<div class="ten columns">
+			{% block right_content %}
+			{% endblock %}
+		</div>
 	</div>
 </div>
 

@@ -1,89 +1,86 @@
 {% extends "staticpages/base.html" %}		
 
-{% block content %}
-	
-	<ul class="seven columns centered" id="left-navbar">
+{% block left_content %}
+	<ul class="eight columns centered" id="left-navbar">
 	  <li class="current"><a href="#mission">Our Mission</a></li>
 	  <li><a href="#story">Our Story</a></li>
 	  <li><a href="#staff">Our Staff</a></li>
 	</ul>
-	
+{% endblock %}
+
+{% block right_content %}
+	<div class="current" id="mission">
+		<h1>Our Mission</h1>
+		<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
+
+		CET courses and programs are divided into 3 categories with speciﬁc objectives:
+
+		Courses that inspire students about entrepreneurial opportunities:
+
+		See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
+		Project courses that teach multidisciplinary skills:
+
+		Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
+		Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
+		Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
+		Programs that launch real companies:
+
+		Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
+		Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
+		Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
+
+		THE CET MISSION
+
+		Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
 	</div>
-	<div class="nine columns" id="main-content">
-		<div class="ten columns">
-			<div class="current" id="mission">
-				<h1>Our Mission</h1>
-				<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
+	<div id="story">
+		<h1>Our Story</h1>
+		<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
 
-				CET courses and programs are divided into 3 categories with speciﬁc objectives:
+		CET courses and programs are divided into 3 categories with speciﬁc objectives:
 
-				Courses that inspire students about entrepreneurial opportunities:
+		Courses that inspire students about entrepreneurial opportunities:
 
-				See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
-				Project courses that teach multidisciplinary skills:
+		See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
+		Project courses that teach multidisciplinary skills:
 
-				Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
-				Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
-				Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
-				Programs that launch real companies:
+		Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
+		Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
+		Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
+		Programs that launch real companies:
 
-				Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
-				Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
-				Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
+		Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
+		Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
+		Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
 
-				THE CET MISSION
+		THE CET MISSION
 
-				Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
-			</div>
-			<div id="story">
-				<h1>Our Story</h1>
-				<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
+		Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
+	</div>
+	<div id="staff">
+		<h1>Our Staff</h1>
+		<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
 
-				CET courses and programs are divided into 3 categories with speciﬁc objectives:
+		CET courses and programs are divided into 3 categories with speciﬁc objectives:
 
-				Courses that inspire students about entrepreneurial opportunities:
+		Courses that inspire students about entrepreneurial opportunities:
 
-				See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
-				Project courses that teach multidisciplinary skills:
+		See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
+		Project courses that teach multidisciplinary skills:
 
-				Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
-				Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
-				Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
-				Programs that launch real companies:
+		Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
+		Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
+		Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
+		Programs that launch real companies:
 
-				Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
-				Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
-				Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
+		Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
+		Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
+		Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
 
-				THE CET MISSION
+		THE CET MISSION
 
-				Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
-			</div>
-			<div id="staff">
-				<h1>Our Staff</h1>
-				<p>Working on the leading edge of technology means new ideas, inspirations and opportunities are ever-present. The curriculum, labs and ecosystem at the CET is designed to give you the entrepreneurial skills and resources you need be a more effective engineer and make your mark on the industry.
-
-				CET courses and programs are divided into 3 categories with speciﬁc objectives:
-
-				Courses that inspire students about entrepreneurial opportunities:
-
-				See E98, E198, and E298 Distinguished Innovator Lecture Series – Learn from real life entrepreneurs, investors, and executives about how actual innovation works.
-				Project courses that teach multidisciplinary skills:
-
-				Technology Entrepreneurship – Case studies and business creation projects (Offered in Fall)
-				Technology Firm Leadership – Case studies and projects to improve your organizational and management skills. (Offered in Spring)
-				Mobile Applications – Lecture and projects to build actual mobile applications. Mixtures of business students and engineering students compete to present their commercially targeted mobile application at the Mobile Work Congress in Barcelona. (Offered in Fall)
-				Programs that launch real companies:
-
-				Venture Lab Incubation and Mentoring - This program, held in the Sky Deck Accelerator, allows the most promising entrepreneurial teams to be mentored by our rich ecosystem.
-				Global Venture Lab Network - A network of global university and industry partners. From the original meeting in November 2010, its proliﬁc output included “Technology, Entrepreneurship and Education: A Report from the Global Venture Lab Inaugural Summit” which offers insight on how ecosystem inﬂuences educational strategies; how university systems designed to promote innovation can often stiﬂe it; and why entrepreneurship education is no longer about how many new ventures a university spins out. The network provides a global support system for best practices for entrepreneurship and corporate innovation.
-				Each CET program is designed to provide Berkeley academics, students and faculty access to Silicon Valley’s rich vein of inspiration and entrepreneurial know-how. Drawing directly from the experiences of the region’s top visionaries, investors and executives, we are able to create a collaborative environment that fosters entrepreneurship at every turn.
-
-				THE CET MISSION
-
-				Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
-			</div>
-		</div>
+		Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</p>
+	</div>
 
 {% endblock %}
 
