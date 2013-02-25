@@ -7,11 +7,14 @@ class Program(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to="program_images",null=True,blank=True)
+    international = models.BooleanField(default=False)
+
     @models.permalink
     def get_absolute_url(self):
         return ('program_detail', [self.pk])
     def __unicode__(self):
         return self.name
+
 admin.site.register(Program)
 
 class Course(models.Model):
@@ -19,9 +22,11 @@ class Course(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to="program_images",null=True,blank=True)
+
     @models.permalink
     def get_absolute_url(self):
         return ('course_detail', [self.pk])
     def __unicode__(self):
         return str(self.program) + ": " + self.name
+
 admin.site.register(Course)
