@@ -47,8 +47,7 @@
 #site-footer {
   z-index: 100;
   color: #cecec6;
-  padding: 30px 0 0 0;
-  margin-top: 100px;
+  padding: 15px 0 0 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#383834), to(#41413c));
 }
 #site-footer h2 {
@@ -64,11 +63,19 @@
 #site-footer a:hover {
   text-decoration: underline;
 }
-#social_icons a{
+ul#social_icons{
 	color: white;
+  margin-top: -15px;
 }
 #copyright {
   color: #141414;
+}
+
+/* Blockquotes - mainly used for milestonses */
+
+blockquote.milestone {
+  border-left: none;
+  border-right: 1px solid #ddd;
 }
 
 /* -----------------------------------------
@@ -98,3 +105,40 @@
 	line-height:50px;
 	font-size:50px;
 }
+
+
+/* -----------------------------------------
+   Static Pages
+----------------------------------------- */
+
+#left-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: gray;
+}
+#left-navbar {
+  background: white;
+  text-align: center;
+  border-radius: 5px;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+  top:30%;
+  list-style-type: none;
+  padding: 0;
+}
+#left-navbar li {
+  padding: 10px;
+}
+#left-navbar .current {
+  background: lightgray;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
