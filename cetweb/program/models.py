@@ -43,7 +43,7 @@ class CertificateApplication(models.Model):
     courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken")
     gpa = models.FloatField(name="GPA")
     def __unicode__(self):
-        return self.name + ": " + self.gpa
+        return self.full_name + ": " + self.gpa
 
 admin.site.register(CertificateApplication)
 
