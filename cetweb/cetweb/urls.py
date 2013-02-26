@@ -16,7 +16,6 @@ urlpatterns = patterns('',
     url(r'^events/', include('events.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^about/$', direct_to_template, {"template":"staticpages/about.html"}, name='about'),
-    url(r'^programs/$', direct_to_template, {"template":"staticpages/programs.html"}, name='about'),
     url(r'^globalprograms/$', direct_to_template, {"template":"staticpages/globalprograms.html"}, name='about'),
     url(r'^comments/', include('django.contrib.comments.urls')),
 

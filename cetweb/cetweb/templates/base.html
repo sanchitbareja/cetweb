@@ -16,6 +16,7 @@
         <title>{% block head_title_base %}CET: {% block head_title %}{% endblock %}{% endblock %}</title>
 
         {% block style_base %}
+            <link href="{% static "css/chosen.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/app.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/custom.css" %}" rel="stylesheet">
             <link href="{% static "foundation/stylesheets/social_foundicons.css" %}" rel="stylesheet">
@@ -48,6 +49,7 @@
             <script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script>
             <script src="{% static "foundation/javascripts/foundation/foundation.min.js" %}"></script>
             <script src="{% static "foundation/javascripts/foundation/app.js" %}"></script>
+            <script src="{% static "js/chosen.jquery.min.js" %}"></script>
             {% block extra_script %}{% endblock %}
         {% endblock %}
     </head>

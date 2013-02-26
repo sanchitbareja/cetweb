@@ -30,3 +30,20 @@ class Course(models.Model):
         return str(self.program) + ": " + self.name
 
 admin.site.register(Course)
+
+class CETCourse(models.Model):
+    name = models.CharField(max_length=300)
+    def __unicode__(self):
+        return self.name
+admin.site.register(CETCourse)
+
+class CertificateApplication(models.Model):
+    full_name = models.CharField(max_length=200)
+    email = models.EmailField()
+    courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken")
+    gpa = models.FloatField(name="GPA")
+    def __unicode__(self):
+        return self.name + ": " + self.gpa
+
+admin.site.register(CertificateApplication)
+

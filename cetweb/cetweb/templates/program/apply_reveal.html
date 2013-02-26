@@ -1,0 +1,47 @@
+<div id="apply_reveal" class="reveal-modal">
+    <form id="apply_reveal_form" method="post" action="">
+        <h3>CET Certificate Program</h3>
+        {% csrf_token %}
+        {{certificate_form.as_p}}
+        <input type="submit" class="nice medium radius blue button close-reveal-modal" id="apply_reveal_button" value="Apply!" />
+    </form>
+</div>
+<script type="text/javascript">
+    jQuery(function(){
+        jQuery("#apply_reveal_button").click(function(){
+            var alert_success = " \
+                <div id='certificate_alert' class='alert-box success'> \
+                    <div id='certificate_alert_text'>Successfully applied!</div> \
+                    <a href='' class='close'>&times;</a> \
+                </div> \
+            ";
+            var alert_error = " \
+                <div id='certificate_alert' class='alert-box warning'> \
+                    <div id='certificate_alert_text'>Failed to apply!</div> \
+                    <a href='' class='close'>&times;</a> \
+                </div> \
+            ";
+
+            jQuery.ajax({
+                type:"POST",
+                url:"{% url program_certificate_apply %}", 
+                data: $("#apply_reveal_form").serialize(),
+                success: function(data){
+                    if(data.success==true)
+                    {
+                        jQuery("#cetcertificate").prepend(alert_success);
+                        jQuery("#certificate_alert_text").html(data.message);
+                    }
+                    else
+                    {
+                        jQuery("#cetcertificate").prepend(alert_error);
+                        jQuery("#certificate_alert_text").html(data.message);
+                    }
+                    jQuery("html, body").animate({ scrollTop: 0 }, "slow");
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
