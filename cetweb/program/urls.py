@@ -5,4 +5,6 @@ urlpatterns = patterns('program.views',
     url(r'^program/(?P<pk>[\w\d]+)/$', 'program_detail', name="program_detail"),
     url(r'^programs/$', 'program_list', name="program_list"),
     url(r'^course/(?P<pk>[\w\d]+)/$', 'course_detail', name="course_detail"),
+
+    url(r'^program/certificate/apply/$', 'program_certificate_apply', name="program_certificate_apply"),
 )

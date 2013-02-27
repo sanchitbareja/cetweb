@@ -30,26 +30,32 @@
                   <li class="has-dropdown">
                       <a class="active" href="#">About us</a>
                       <ul class="dropdown">
-                        <li><a href="#" class="">Mission</a></li>
-                        <li><a href="#" class="">History</a></li>
-                        <li><a href="#" class="">Team</a></li>
+                        <li><a href="/about/#mission" class="">Mission</a></li>
+                        <li><a href="/about/#story" class="">History</a></li>
+                        <li><a href="/about/#staff" class="">Team</a></li>
                       </ul>
                   </li>
 
                   <li class="has-dropdown">
                       <a class="active" href="#">International</a>
                       <ul class="dropdown">
-                        <li><a href="#" class="">Startup@Berkeley</a></li>
-                        <li><a href="#" class="">Tsinghua-Berkeley GTE Center</a></li>
-                        <li><a href="#" class="">Syndicated Programs</a></li>
+                        <li><a href="/globalprograms/#startupatberkeley" class="">Startup@Berkeley</a></li>
+                        <li><a href="/globalprograms/#tsinghua" class="">Tsinghua-Berkeley GTE Center</a></li>
+                        <li><a href="/globalprograms/#syndicatedprograms" class="">Syndicated Programs</a></li>
                       </ul>
                   </li>
                   <li class="has-dropdown">
                       <a class="active" href="#">Programs</a>
                       <ul class="dropdown">
+                          <li><a href="{% url program_list %}#cet_intro" class="">CET Certificate</a></li>
+                        <li><a href="{% url program_list %}#vl_intro" class="">Venture Lab</a></li>
+                        <li><a href="{% url program_list %}#ttt_intro" class="">Teach the Teachers</a></li>
+                        <li><a href="{% url program_list %}#fung_intro" class="">Research @ the Fung Institute</a></li>
+                        <!-- 
                         {% for program in programs %}
                         <li><a href="{{program.get_absolute_url}}" class="">{{program.name}}</a></li>
                         {% endfor %}
+                         -->
                       </ul>
                   </li>
                   <li>
