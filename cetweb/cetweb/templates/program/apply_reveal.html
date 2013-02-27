@@ -29,12 +29,12 @@
                 success: function(data){
                     if(data.success==true)
                     {
-                        jQuery("#cetcertificate").prepend(alert_success);
+                        jQuery("#certificate").prepend(alert_success);
                         jQuery("#certificate_alert_text").html(data.message);
                     }
                     else
                     {
-                        jQuery("#cetcertificate").prepend(alert_error);
+                        jQuery("#certificate").prepend(alert_error);
                         jQuery("#certificate_alert_text").html(data.message);
                     }
                     jQuery("html, body").animate({ scrollTop: 0 }, "slow");
