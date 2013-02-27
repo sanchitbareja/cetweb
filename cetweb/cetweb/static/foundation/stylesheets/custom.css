@@ -45,6 +45,7 @@
 
 /* Footer styling */
 #site-footer {
+  margin-top: 200px;
   z-index: 100;
   color: #cecec6;
   padding: 15px 0 0 0;
@@ -71,18 +72,25 @@ ul#social_icons{
   color: #141414;
 }
 
-/* Blockquotes - mainly used for milestonses */
-
+/* Blockquotes Styling */
 blockquote.milestone {
   border-left: none;
   border-right: 1px solid #ddd;
+}
+#testimonial-box {
+  text-align: center;
+  margin-top: 120px;
+}
+blockquote.testimonials {
+  font-style: italic;
+  font-size: 24px;
+  border-left: none;
+  padding: 10px;
 }
 
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
-
-
 
 
 /* -----------------------------------------
@@ -116,11 +124,11 @@ blockquote.milestone {
   top: 0;
   left: 0;
   height: 100%;
-  background: gray;
+  background: url(../images/leftcontent.jpg) no-repeat #ccc fixed top left;
 }
 #left-navbar {
   background: white;
-  text-align: center;
+  text-align: left;
   border-radius: 5px;
   filter: alpha(opacity=75);
   opacity: 0.75;
@@ -129,11 +137,22 @@ blockquote.milestone {
   padding: 0;
 }
 #left-navbar li {
-  padding: 10px;
+  padding: 2px;
 }
-#left-navbar .current {
-  background: lightgray;
+.toplevel.current {
+  background: white;
+}
+.subnav.current {
+  background: #ccc; /*80% white*/
   border-radius: 5px;
+}
+.subnav:hover {
+  background: #e6e6e6; /*90% white*/
+  border-radius: 5px;
+}
+.subnav {
+  list-style-type: none;
+  text-align: center;
 }
 
 
