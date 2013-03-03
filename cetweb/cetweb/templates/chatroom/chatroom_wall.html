@@ -1,0 +1,9 @@
+{% extends "chatroom/base.html" %}
+{% load comments %}
+
+{% block body %}
+    {% get_comment_form for site as form %}
+    {% url chatroom_wall as next %}
+        {% include "comments/form.html" %}
+    {% render_comment_list for site %}
+{% endblock %}

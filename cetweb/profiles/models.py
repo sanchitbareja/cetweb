@@ -13,6 +13,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User)
     stakeholder = models.CharField(max_length=50,choices=settings.STAKEHOLDERS,default=settings.STAKEHOLDER_DEFAULT)
     image = models.ImageField(upload_to="profile_images",null=True,blank=True)
+
 @receiver(post_save,sender=User)
 def create_user_profile(sender,instance,created,**kwargs):
     """

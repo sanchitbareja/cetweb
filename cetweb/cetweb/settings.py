@@ -70,6 +70,11 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = 'AKIAJELY5ITX2PV3GRNQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'undercover_dev'
+AWS_S3_SECURE_URLS = True
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '2jnnod*#9ri2wg@b_uyan(^dk87txmrb2q9*lwk&amp;u*dw&amp;!88m*'
@@ -100,6 +105,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "program.context_processors.programs",
+    "cetweb.context_processors.site",
 )
 
 ROOT_URLCONF = 'cetweb.urls'
