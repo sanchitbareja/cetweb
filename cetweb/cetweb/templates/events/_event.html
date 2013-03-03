@@ -1,4 +1,41 @@
-<h1>Event: {{event.name}}</h1>
-{% if event.image %}
-    <img src="{{event.image.url}}" />
-{% endif %}
+<div class="row" id="event_{{event.id}}">
+    <a href="#" data-reveal-id="event_reveal_{{event.id}}">
+        <div class="large-3 columns">
+            {% if event.image %}
+                <img style="height:120px;width:120px;" src="{{event.image.url}}" />
+            {% endif %}
+        </div>
+        <div class="large-9 columns">
+            <p style="word-break:hyphenate;">
+                <strong>
+                {{event.time.date}} <br />
+                {{event.time.time}} | {{event.location}} <br />
+                {{event.name}}
+                </strong>
+            </p>
+        </div>
+    </a>
+</div>
+<div id="event_reveal_{{event.id}}" class="reveal-modal">
+    <strong>
+    {{event.time.date}} <br />
+    {{event.time.time}} | {{event.location}} <br />
+    {{event.name}}
+    </strong>
+    <hr />
+    <br />
+    {{event.description}}
+    <br />
+    <a href="http://www.google.com/calendar/event?action=
+          TEMPLATE&text;=Brunch at Java Cafe&dates;=201315T180000Z/
+            20130415T190000Z&location;=Java Cafe, San Francisco, CA
+              &details;=Try our Saturday brunch special:<br><br>French
+                toast with fresh fruit<br><br>Yum!&trp;=true&sprop;=
+                  website:http://www.javacafebrunches.com&sprop;=name:Jave Cafe">
+            Test
+    </a>
+    <a href="http://www.google.com/calendar/event?
+        action=TEMPLATE&text;={{event.name}}&sprop;=website:cet.berkeley.edu&location;={{event.location}}&dates;={{event.time|date:"Ymd"}}/{{event.time|date:"Ymd"}}">
+        Add to google calandar
+    </a>
+</div>
