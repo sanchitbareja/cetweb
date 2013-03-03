@@ -15,7 +15,6 @@ def event_list(request):
         Displays the job listings.
     """
     events = Event.objects.all()
-    print events
     return render_to_response("events/event_list.html",{"events":events},context_instance=RequestContext(request))
 
 def event(request,pk):
@@ -24,7 +23,6 @@ def event(request,pk):
     """
     e = get_object_or_404(Event,pk=pk)
     return render_to_response("events/event.html",{"event":e},context_instance=RequestContext(request))
-
 
 @login_required
 def create_event(request):
