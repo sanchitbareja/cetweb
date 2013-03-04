@@ -12,3 +12,4 @@ psycopg2==2.4.6
 pytz==2012j
 twill==0.9
 wsgiref==0.1.2
+simplejson==2.6.1
