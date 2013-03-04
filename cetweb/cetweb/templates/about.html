@@ -3,20 +3,18 @@
 {% block head_title %}About{% endblock %}
 
 {% block body %}
-<style type="text/css">
-	#about-nav-bar {
-		position: fixed;
-	}
-</style>
-
 <div data-magellan-expedition="fixed" style="padding:10px 10px 0px 10px; background-color:#eee; width:100%; text-align:center;">
-	<dl class="sub-nav" style="margin-bottom:0px; left:40%;">
-    	<dd data-magellan-arrival="mission"><a href="#mission">Mission</a></dd>
-    	<dd data-magellan-arrival="staff"><a href="#staff">Staff</a></dd>
-    	<dd data-magellan-arrival="founder"><a href="#founder">Founder Stories</a></dd>
-    	<dd data-magellan-arrival="alumni"><a href="#alumni">Alumni</a></dd>
-    	<dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd>
-  	</dl>
+	<div class="row">
+		<div class="twelve columns">
+		<dl class="sub-nav" style="margin-bottom:0px;">
+	    	<dd data-magellan-arrival="mission"><a href="#mission">Mission</a></dd>
+	    	<dd data-magellan-arrival="staff"><a href="#staff">Staff</a></dd>
+	    	<dd data-magellan-arrival="founder"><a href="#founder">Founder Stories</a></dd>
+	    	<dd data-magellan-arrival="alumni"><a href="#alumni">Alumni</a></dd>
+	    	<dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd>
+	  	</dl>
+	  </div>
+	</div>
 </div>
 
 <div class="row">
