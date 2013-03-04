@@ -201,4 +201,7 @@ STAKEHOLDERS = (
 STAKEHOLDER_DEFAULT = "founder"
 AUTH_PROFILE_MODULE = "profiles.Profile"
 
-import settings_local
+try:
+    import settings_local
+except ImportError:
+    pass # there is no local settings file
