@@ -1,0 +1,27 @@
+{% load humanize %}
+{% load comments %}
+<div class="row">
+    <div class="large-2 columns">
+        <img src="{{comment.user.get_profile.image.url}}" style="width:50px;height:50px;" />
+    </div>
+    <div class="large-8 columns" style="width:400px;">
+        <h6>FEEDBACK</h6>
+        <div><strong>{{comment.user.get_full_name}}</strong>  {{comment.comment}}</div>
+        {% comment %}
+            {% get_comment_form for comment as form %}
+            {% url chatroom_wall as next %}
+            {% include "comments/form_subcomment.html" %}
+            <div class="row">
+                <div class="large-2">
+                    <br />
+                </div>
+                <div class="large-10">
+                    {% render_comment_list for comment %}
+                </div>
+            </div>
+        {% endcomment %}
+    </div>
+    <div class="large-2 columns">
+        {{comment.submit_date|naturaltime}}
+    </div>
+</div>

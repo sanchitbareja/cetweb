@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.comments',
+    'django.contrib.humanize',
 
     #external
     'south',
@@ -177,7 +178,7 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
-from cetweb.settings_local import DATABASES
+# from cetweb.settings_local import DATABASES
 
 if DEBUG is True:
     class AllIPS(list):
@@ -201,4 +202,7 @@ STAKEHOLDERS = (
 STAKEHOLDER_DEFAULT = "founder"
 AUTH_PROFILE_MODULE = "profiles.Profile"
 
-import settings_local
+try:
+    import settings_local
+except ImportError:
+    pass # there is no local settings file

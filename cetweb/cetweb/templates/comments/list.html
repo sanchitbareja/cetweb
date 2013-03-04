@@ -1,4 +1,7 @@
 {% load comments %}
-{% for comment in comment_list %}
-    <p>{{comment}}</p>
+{% for comment in comment_list reversed %}
+    {% include "comments/comment.html" %}
+    {% if not forloop.last %}
+        <hr />
+    {% endif %}
 {% endfor %}
