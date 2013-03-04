@@ -47,29 +47,36 @@
         {% block script_base %}
             <script src="{% static "foundation/javascripts/foundation/modernizr.foundation.js" %}"></script>
             <script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script>
-            <script src="{% static "foundation/javascripts/foundation/foundation.min.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.cookie.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.event.move.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.event.swipe.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.accordion.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.alerts.js" %}"></script>            
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.buttons.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.clearing.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.forms.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.joyride.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.magellan.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.mediaQueryToggle.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.navigation.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.orbit.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.reveal.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.tabs.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.tooltips.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.foundation.topbar.js" %}"></script>
+            <script src="{% static "foundation/javascripts/foundation/jquery.placeholder.js" %}"></script>
             <script src="{% static "foundation/javascripts/foundation/app.js" %}"></script>
+<<<<<<< HEAD
             <script src="{% static "js/chosen.jquery.min.js" %}"></script>
             <script src="{% static "js/jquery.autosize-min.js" %}"></script>
+=======
+>>>>>>> 9ee8bb565a3029192417a3d671c7e7d1493e811a
             {% block extra_script %}{% endblock %}
         {% endblock %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
         {% block topbar_base %}
-          <div class="fixed">
-            <nav class="top-bar">
-              <ul>
-                <!-- Title Area -->
-                <li class="name">
-                      <a href="{% url home %}">
-                          <img src="{% static "images/CET_logo1.png" %}" id="cet_logo"/>
-                    </a>
-                </li>
-                <li class="toggle-topbar"><a href="#"></a></li>
-              </ul>
-            </nav>
-          </div>
           {% include "_account_bar.html" %}
 
         {% endblock %}

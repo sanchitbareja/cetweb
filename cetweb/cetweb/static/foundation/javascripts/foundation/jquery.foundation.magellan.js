@@ -62,7 +62,7 @@
         if ($expedition.data("magellan-fixed-position") != fixed_position) {
           $expedition.data("magellan-fixed-position", fixed_position);
           if (fixed_position) {
-            $expedition.css({position:"fixed", top:0});
+            $expedition.css({position:"fixed", top:60, zIndex:10});
           } else {
             $expedition.css({position:"", top:""});
           }

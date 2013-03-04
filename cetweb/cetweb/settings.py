@@ -178,10 +178,14 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
+from cetweb.settings_local import DATABASES
 
+if DEBUG is True:
+    class AllIPS(list):
+        def __contains__(self, item):
+            return True
 
-#debug_debug_toolbar
-INTERNAL_IPS = ('127.0.0.1',)
+INTERNAL_IPS = AllIPS()
 DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
 }

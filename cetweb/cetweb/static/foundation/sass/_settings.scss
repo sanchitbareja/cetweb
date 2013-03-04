@@ -95,8 +95,8 @@
 
 // Top Bar Settings
 
-$topBarBgColor: #035A8F;
-$topBarHeight: 80px;
+$topBarBgColor: #222;
+$topBarHeight: 60px;
 $topBarHeightMobile: 45px;
 $topBarBtmMargin: 30px;
 $topBarTitleWeight: bold;
@@ -104,7 +104,7 @@ $topBarTitleSize: 17px;
 $topBarLinkColor: white;
 $topBarLinkWeight: bold;
 $topBarLinkSize: 13px;
-$topBarDropBgColor: #222;
+$topBarDropBgColor: #000;
 $topBarDropLinkColor: #fff;
 $topBarDropToggleSize: 5px;
 $topBarDropToggleColor: #fff;
@@ -113,6 +113,8 @@ $topBarSearchWidth: 200px;
 $topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
 $topBarNavToggleSize: 8px;
 $topBarNavToggleColor: #fff;
+
+
 
 // UI Settings
 

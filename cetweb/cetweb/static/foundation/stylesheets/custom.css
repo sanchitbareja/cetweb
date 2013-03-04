@@ -45,7 +45,7 @@
 
 /* Footer styling */
 #site-footer {
-  margin-top: 200px;
+  bottom:0px;
   z-index: 100;
   color: #cecec6;
   padding: 15px 0 0 0;
@@ -157,7 +157,18 @@ blockquote.testimonials {
 }
 
 
+/* About Us Page */
+.header-center {
+  text-align: center;
+}
 
+.content-center {
+  text-align: center;
+}
+
+ul.vcard {
+  border: 0px;
+}
 
 
 
