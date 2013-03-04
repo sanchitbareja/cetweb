@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block head_title %}Home{% endblock %}
+{% block head_title %}About{% endblock %}
 
 {% block body %}
 <style type="text/css">
@@ -9,75 +9,142 @@
 	}
 </style>
 
-<div class="row">
-	<div class="one columns">
-		<ul class="side-nav" id="about-nav-bar">
-		  <li class="active"><a href="#">Link 1</a></li>
-		  <li><a href="#">Link 2</a></li>
-		  <li><a href="#">Link 3</a></li>
-		  <li><a href="#">Link 4</a></li>
-		</ul>
-	</div>
+<div data-magellan-expedition="fixed" style="padding:10px 10px 0px 10px; background-color:#eee; width:100%; text-align:center;">
+	<dl class="sub-nav" style="margin-bottom:0px; left:40%;">
+    	<dd data-magellan-arrival="mission"><a href="#mission">Mission</a></dd>
+    	<dd data-magellan-arrival="staff"><a href="#staff">Staff</a></dd>
+    	<dd data-magellan-arrival="founder"><a href="#founder">Founder Stories</a></dd>
+    	<dd data-magellan-arrival="alumni"><a href="#alumni">Alumni</a></dd>
+    	<dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd>
+  	</dl>
+</div>
 
-	<div class="eleven columns">
+<div class="row">
+
+	<div class="current" id="mission">
+		<div data-magellan-destination="mission"></div>
+		<h1 class="header-center">Our Mission</h1>
+		<h5 class="content-center">The UC Berkeley CET aims to provide Berkeley founders with the tools to innovate, productize, & commercialize their big ideas.</h5>
+	</div>
+	<hr />
+	<div id="staff">
+		<div data-magellan-destination="staff"></div>
+		<h1 class="header-center">Our Staff</h1>
 		<div class="row">
-			<div class="twelve columns">
-				<section class="four columns">
-					<h6><strong>Success Story 1</strong></h6>
-					<a href="#" class="th"><img src="http://images.ted.com/images/ted/17630_254x191.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. What is wrong here? Critique please.</p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 2</strong></h6>
-					<a href="#" class="th"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RichardBransonVAOCApr09.jpg/220px-RichardBransonVAOCApr09.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. Just saying that this is awesome. </p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 3</strong></h6>
-					<a href="#" class="th"><img src="http://blogs-images.forbes.com/carminegallo/files/2012/10/richard-branson-1.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. And we are out of words. Lorem ipsum ....</p>
-				</section>
+			<div class="two columns">
+				<img src="http://funginstitute.berkeley.edu/sites/default/files/styles/square_thumbnail/public/chien_c.jpg" style="width:100%;" />
+			</div>
+			<div class="ten columns">
+				<ul class="vcard">
+				  	<li class="fn">Cindy Chien, Product Manager</li>
+				  	<li>Lorem ipsum dolor sit amet, at mei suas deleniti, duo no menandri pericula. Utroquepericula mei at, elit sententiae delicatissimi has ne. Prima simul per cu. Civibus tacimates sed in.</li>
+				  	<li class="email"><a href="#">kensinger@berkeley.edu</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="founder">
+		<div data-magellan-destination="founder"></div>
+		<h1 class="header-center">CET Founder Stories</h1>
+		<div class="row">
+			<div class="two columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" />
+			</div>
+			<div class="ten columns">
+				<ul class="vcard">
+				  	<li class="fn">Darshan Shankar, CET Alumni, CEO & Founder of Flotype</li>
+				  	<li>Lorem ipsum dolor sit amet, at mei suas deleniti, duo no menandri pericula. Utroquepericula mei at, elit sententiae delicatissimi has ne. Prima simul per cu. Civibus tacimates sed in.</li>
+				  	<li class="website"><a href="http://www.flotype.com">www.flotype.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="alumni">
+		<div data-magellan-destination="alumni"></div>
+		<h1 class="header-center">CET Alumni Portfolio</h1>
+		<div class="row">
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
 			</div>
 		</div>
 		<div class="row">
-			<div class="twelve columns">
-				<section class="four columns">
-					<h6><strong>Success Story 1</strong></h6>
-					<a href="#" class="th"><img src="http://images.ted.com/images/ted/17630_254x191.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. What is wrong here? Critique please.</p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 2</strong></h6>
-					<a href="#" class="th"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RichardBransonVAOCApr09.jpg/220px-RichardBransonVAOCApr09.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. Just saying that this is awesome. </p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 3</strong></h6>
-					<a href="#" class="th"><img src="http://blogs-images.forbes.com/carminegallo/files/2012/10/richard-branson-1.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. And we are out of words. Lorem ipsum ....</p>
-				</section>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
 			</div>
 		</div>
 		<div class="row">
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+			<div class="four columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/1555823954/flotype3_white_blue_bg.png" />
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="sponsors">
+		<div data-magellan-destination="sponsors"></div>
+		<h1 class="header-center">Sponsors</h1>
+		<div class="row">
+			<div class="four columns">
+				<ul>
+					<li>Agilent</li>
+					<li>Applied</li>
+					<li>Materials</li>
+					<li>Boeing</li>
+					<li>Cooper</li>
+					<li>Industries</li>
+					<li>Genentech</li>
+				</ul>
+			</div>
+			<div class="four columns">
+				<ul>
+					<li>Agilent</li>
+					<li>Applied</li>
+					<li>Materials</li>
+					<li>Boeing</li>
+					<li>Cooper</li>
+					<li>Industries</li>
+					<li>Genentech</li>
+				</ul>
+			</div>
+			<div class="four columns">
+				<ul>
+					<li>Agilent</li>
+					<li>Applied</li>
+					<li>Materials</li>
+					<li>Boeing</li>
+					<li>Cooper</li>
+					<li>Industries</li>
+					<li>Genentech</li>
+				</ul>
+			</div>			
+		</div>
+		<div class="row">
 			<div class="twelve columns">
-				<section class="four columns">
-					<h6><strong>Success Story 1</strong></h6>
-					<a href="#" class="th"><img src="http://images.ted.com/images/ted/17630_254x191.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. What is wrong here? Critique please.</p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 2</strong></h6>
-					<a href="#" class="th"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/RichardBransonVAOCApr09.jpg/220px-RichardBransonVAOCApr09.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. Just saying that this is awesome. </p>
-				</section>
-				<section class="four columns">
-					<h6><strong>Success Story 3</strong></h6>
-					<a href="#" class="th"><img src="http://blogs-images.forbes.com/carminegallo/files/2012/10/richard-branson-1.jpg"></a>
-					<p>Story 1 is awesome and really awesome but it really is awesome. And we are out of words. Lorem ipsum ....</p>
-				</section>
+				<p>For information about affiliating your company with the Berkeley Master of Engineering Program, contact Ikhlaq Sidhu, Chief Scientist, Fung Institute for Engineering Leadership.</p>
 			</div>
 		</div>
 	</div>
 </div>
+
+
 
 {% endblock %}
