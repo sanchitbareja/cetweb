@@ -9,7 +9,7 @@ class ProfileForm(forms.Form):
 
     #For founders only:
     startup_name = forms.CharField()
-    startup_url = forms.CharField() # startup url (or some kind of proof)
+    startup_url = forms.CharField()
     role = forms.CharField()
     # For mentors only:
     industries = forms.CharField()

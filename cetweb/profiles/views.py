@@ -2,12 +2,12 @@ from django.shortcuts import *
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-
-from forms import ProfileForm
+from django.contrib.auth.decorators import login_required
 import simplejson
 
+from forms import ProfileForm
 
-# Basic form handling
+
 # def signup(request):
 #     if request.method == 'POST':
 #         form = ProfileForm(request.POST)
@@ -63,24 +63,12 @@ def signup(request):
     return render_to_response('profiles/signup.html', {'form': form}, context_instance=RequestContext(request))
 
 
+@login_required
+def dashboard(request):
+    return render_to_response('profiles/dashboard.html', context_instance=RequestContext(request))
 
 
 
 
 
-# def thanks(request, first_name, last_name, email):
-#     return render_to_response('profiles/thanks.html', {'first_name': first_name}, context_instance=RequestContext(request))
 
-
-
-# def profile(request,username=None):
-#     if not username:
-#         if request.user.is_authenticated():
-#             p = request.user.get_profile()
-#             return render_to_response("profiles/profile.html",{"profile":p},context_instance=RequestContext(request))
-#         else:
-#             messages.error("You need to login first.")
-#             return HttpResponseRedirect(reverse("home"))
-#     else:
-#         p = get_object_or_404(User,username=username).get_profile()
-#         return render_to_response("profiles/profile.html",{"profile":p},context_instance=RequestContext(request))

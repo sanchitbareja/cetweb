@@ -1,0 +1,13 @@
+{% extends "profiles/base.html" %}
+
+{% block body %}
+	<div class="six columns offset-by-three">
+	    <div id="chatroom">
+	    	{% include "chatroom/chatroom_wall.html" %}
+	    </div>
+	</div>
+	<div class="three columns">
+		<a class="button secondary radius" href="/profile/explore">Explore the CET network</a>
+		<a class="button secondary radius" href="/profile/startup">{{ user.startup_name }}</a>
+	</div>
+{% endblock %}
