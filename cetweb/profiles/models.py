@@ -9,10 +9,22 @@ from django.dispatch import receiver
 
 from django.conf import settings
 
+
 class Profile(models.Model):
     user = models.OneToOneField(User)
     stakeholder = models.CharField(max_length=50,choices=settings.STAKEHOLDERS,default=settings.STAKEHOLDER_DEFAULT)
-    image = models.ImageField(upload_to="profile_images",null=True,blank=True)
+    activated = models.BooleanField(default=False)
+    #Founders:
+    startup_name = models.CharField(max_length=50, blank=True)
+    stratup_url = models.SlugField(max_length=50, blank=True)
+    role = models.CharField(max_length=50, blank=True)
+    # Mentors:
+    industries = models.CharField(max_length=50, blank=True)
+    # Faculty:
+    department = models.CharField(max_length=50, blank=True)
+
+    def __unicode__(self):
+        return self.user.last_name
 
 @receiver(post_save,sender=User)
 def create_user_profile(sender,instance,created,**kwargs):
