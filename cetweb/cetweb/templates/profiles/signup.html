@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block body %}
+
+<div class='row'>
+	<div class="seven columns centered">
+		<div id='signup'>
+			<div class='form-presentation' id="presentation">
+				<div class='form-presentation' id="neutral-presentation">
+					<h1>Welcome to the best network of entrpreneurs in the world.</h1>
+				</div>
+				<div class='form-presentation' id="founder-presentation">
+					<h3>Here we explain what founders can do.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla metus commodo lacus mattis vitae malesuada magna pulvinar. Maecenas luctus sem id sem pretium eu sagittis est hendrerit. Integer at velit ac magna facilisis ultrices ut vitae tellus. Donec vestibulum tincidunt nisi non eleifend. Fusce interdum metus in tortor ullamcorper vitae mollis neque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel metus sagittis lacus convallis porta ut a dui.</p>
+				</div>
+				<div class='form-presentation' id="mentor-presentation">
+					<h3>Here we explain what mentors can do.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla metus commodo lacus mattis vitae malesuada magna pulvinar. Maecenas luctus sem id sem pretium eu sagittis est hendrerit. Integer at velit ac magna facilisis ultrices ut vitae tellus. Donec vestibulum tincidunt nisi non eleifend. Fusce interdum metus in tortor ullamcorper vitae mollis neque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel metus sagittis lacus convallis porta ut a dui.</p>
+				</div>
+				<div class='form-presentation' id="faculty-presentation">
+					<h3>Here we explain what faculty can do.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla metus commodo lacus mattis vitae malesuada magna pulvinar. Maecenas luctus sem id sem pretium eu sagittis est hendrerit. Integer at velit ac magna facilisis ultrices ut vitae tellus. Donec vestibulum tincidunt nisi non eleifend. Fusce interdum metus in tortor ullamcorper vitae mollis neque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel metus sagittis lacus convallis porta ut a dui.</p>
+				</div>
+			</div>
+			<form method="post"> {% csrf_token %}
+		    	{{ form.non_field_errors }}
+				<fieldset>
+					<p>You are a:
+						<input name="stakeholder" type="radio" value="founder" id="radio-founder">Founder</label>
+						<input name="stakeholder" type="radio" value="mentor" id="radio-mentor">Mentor</label>
+						<input name="stakeholder" type="radio" value="faculty" id="radio-faculty">Faculty</label>
+					</p>
+			  	</fieldset>
+		  		<fieldset id="specific-forms">
+				    <div class="">
+				        {{ form.first_name.errors }}
+				        <label for="first_name">First Name:</label>
+				        {{ form.first_name }}
+				    </div>
+				    <div class="">
+				        {{ form.last_name.errors }}
+				        <label for="last_name">Last Name:</label>
+				        {{ form.last_name }}
+				    </div>
+				   	<div class="">
+				        {{ form.email.errors }}
+				        <label for="email">Email:</label>
+				        {{ form.email }}
+				    </div>
+					    <!-- Optional fields for Founders-->
+				    <div id="for-founders">
+					    <div class="">
+					        {{ form.startup_name.errors }}
+					        <label for="startup_name">Startup Name:</label>
+					        {{ form.startup_name }}
+					    </div>
+					    <div class="">
+					        {{ form.startup_url.errors }}
+					        <label for="startup_url">startup url:</label>
+					        {{ form.startup_url }}
+					    </div>
+					    <div class="">
+					        {{ form.role.errors }}
+					        <label for="role">Role:</label>
+					        {{ form.role }}
+					    </div>
+					</div>
+				    <!-- Optional fields for Mentors-->
+				    <div id="for-mentors">
+					    <div class="">
+					        {{ form.industries.errors }}
+					        <label for="industries">What industry would you like to be contacted about?</label>
+					        {{ form.industries }}
+					    </div>
+					</div>
+				    <!-- Optional fields for Faculty-->
+				    <div id="for-faculty">
+					    <div class="">
+					        {{ form.department.errors }}
+					        <label for="department">What is your department?</label>
+					        {{ form.department }}
+					    </div>
+					</div>
+			        <input class="radius button" id="request_invite"  type="submit" value="Request an Invite" />
+			    </fieldset>
+			</form>
+		</div>
+		<div id='thanks'>
+			Thank you {{ first_name }} for showing interest in the CET network. You'll hear from us soon!
+		</div>
+	</div>
+</div>
+
+<script src="{% static 'foundation/javascripts/foundation/jquery.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#founder-presentation').hide();
+	$('#mentor-presentation').hide();
+	$('#faculty-presentation').hide();
+	$('#specific-forms').hide();
+	$('#thanks').hide();
+    $('#radio-founder').click(function() {
+    	$('#neutral-presentation').hide();
+    	$('#mentor-presentation').hide();
+    	$('#faculty-presentation').hide();
+    	$('#founder-presentation').fadeIn(800);
+    	$('#specific-forms').fadeIn(800);
+		$('#for-founders').show();
+    	$('#for-mentors').hide();
+    	$('#for-faculty').hide();
+    });
+    $('#radio-mentor').click(function() {
+    	$('#neutral-presentation').hide();
+    	$('#founder-presentation').hide();
+    	$('#faculty-presentation').hide();
+    	$('#mentor-presentation').fadeIn(800);
+    	$('#specific-forms').fadeIn(800);
+		$('#for-founders').hide();
+    	$('#for-mentors').show();
+    	$('#for-faculty').hide();
+    });
+    $('#radio-faculty').click(function() {
+    	$('#neutral-presentation').hide();
+		$('#founder-presentation').hide();
+    	$('#mentor-presentation').hide();
+    	$('#faculty-presentation').fadeIn(800);
+    	$('#specific-forms').fadeIn(800);
+		$('#for-founders').hide();
+    	$('#for-mentors').hide();
+    	$('#for-faculty').show();
+    });
+});
+$("#request_invite").click(function() {
+	$.ajax({
+		type: "POST",
+		url: "/profiles/thanks/",
+		data: { first_name: $("#first_name").val(),
+				last_name: $("#last_name").val(),
+				email: $("#email").val(),
+				startup_name: $("#startup_name").val(),
+				startup_url: $("#startup_url").val(),
+				role: $("#role").val(),
+				industries: $("#industries").val(),
+				department: $("#department").val(),
+				csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()
+			  }
+		}).done(function( returnData ) {
+			if(returnData['success']){
+				$('#signup').hide();
+				$('#thanks').show();
+			}
+	});
+});
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

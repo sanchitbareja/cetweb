@@ -156,8 +156,14 @@ blockquote.testimonials {
   text-align: center;
 }
 
+/* -----------------------------------------
+   profiles/signup
+----------------------------------------- */
 
-
+.form-presentation {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
 
 
 
