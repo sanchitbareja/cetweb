@@ -11,8 +11,9 @@
         <input type="hidden" name="email" value="tmp@gmail.com"/>
     {% endif %}
     <input type="hidden" name="next" value="{{next}}" />
-    <textarea class="comment_textarea" id="id_comment" rows=1 style="resize:none;width:100%" placeholder="Leave a comment..." name="comment"></textarea>
-    <input type="submit" name="post" class="btn pull-right" value="{% trans "Post" %}" />
+    <img src="{{user.get_profile.image.url}}" style="float:left;width:10%;" />
+    <textarea class="comment_textarea" id="id_comment" rows=1 style="resize:none;height:50px;padding:15px;width:70%;float:left;" placeholder="Share something new" name="comment"></textarea>
+    <input type="submit" name="post" class="button pull-right" value="{% trans "Post" %}" style="height:50px;width:20%;"/>
     <script type="text/javascript">
         $(function(){
                 $(".comment_textarea").autosize();
