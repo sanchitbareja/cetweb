@@ -10,13 +10,19 @@ from django.contrib import messages
 from events.models import Event
 from events.forms import EventForm
 
+def event_list(request):
+    """
+        Displays the job listings.
+    """
+    events = Event.objects.all()
+    return render_to_response("events/event_list.html",{"events":events},context_instance=RequestContext(request))
+
 def event(request,pk):
     """
         Displays a job listing.
     """
     e = get_object_or_404(Event,pk=pk)
     return render_to_response("events/event.html",{"event":e},context_instance=RequestContext(request))
-
 
 @login_required
 def create_event(request):

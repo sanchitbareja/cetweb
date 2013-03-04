@@ -40,13 +40,11 @@ def course_detail(request,pk):
 @csrf_exempt
 def program_certificate_apply(request):
     data = {"success": False,"message":"Please completely fill out the form."}
-    if request.is_ajax():
-        if request.method=="POST":
-            form = CertificateApplicationForm(request.POST)
-            if form.is_valid():
-                form.save()
-                data['success'] = True
-                data['message'] = "Thanks! We will get back to you shortly."
-            else:
-                data['message'] = "Please correctly fill out the form."
+    form = CertificateApplicationForm(request.POST or request.GET)
+    if form.is_valid():
+        form.save()
+        data['success'] = True
+        data['message'] = "Thanks! We will get back to you shortly."
+    else:
+        data['message'] = "Please correctly fill out the form."
     return HttpResponse(json.dumps(data), mimetype="application/json")

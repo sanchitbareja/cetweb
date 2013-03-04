@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 
 {% block head_title %}Home{% endblock %}
 
@@ -70,7 +71,7 @@
 
     <script type='text/javascript'>
 	   $(window).load(function() {
-	       $('#featuredContent').orbit({ fluid: '16x5', directionalNav: false, bullets:true, bulletsThumbs:true });
+	       $('#featuredContent').orbit({ fluid:'16x5', directionalNav: false, bullets:true, bulletsThumbs:true, });
 	   });
 	</script>
 {% endblock %}

@@ -1,0 +1,24 @@
+{% extends "events/base.html" %}
+
+{% block body %}
+    <div class="row">
+        <br />
+        <h3 style="margin-left:15px;">Events</h3>
+        <div class="large-5 columns">
+            <h4>CET & On Campus</h4>
+            {% for event in events %}
+                {% if event.cet %}
+                    {% include "events/_event.html" %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="large-5 columns">
+            <h4>Around the Bay</h4>
+            {% for event in events %}
+                {% if not event.cet %}
+                    {% include "events/_event.html" %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

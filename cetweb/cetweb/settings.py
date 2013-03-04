@@ -15,7 +15,7 @@ MANAGERS = ADMINS
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Los_Angeles'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -70,6 +70,11 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = 'AKIAJELY5ITX2PV3GRNQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'undercover_dev'
+AWS_S3_SECURE_URLS = True
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '2jnnod*#9ri2wg@b_uyan(^dk87txmrb2q9*lwk&amp;u*dw&amp;!88m*'
@@ -100,6 +105,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "program.context_processors.programs",
+    "cetweb.context_processors.site",
 )
 
 ROOT_URLCONF = 'cetweb.urls'

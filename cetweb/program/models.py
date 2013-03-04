@@ -40,10 +40,10 @@ admin.site.register(CETCourse)
 class CertificateApplication(models.Model):
     full_name = models.CharField(max_length=200)
     email = models.EmailField()
-    courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken")
-    gpa = models.FloatField(name="GPA")
+    courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken",blank=False)
+    GPA = models.FloatField(blank=False)
     def __unicode__(self):
-        return self.name + ": " + self.gpa
+        return self.full_name + ", GPA:" + str(self.GPA)
 
 admin.site.register(CertificateApplication)
 

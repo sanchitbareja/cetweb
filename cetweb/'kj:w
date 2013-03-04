@@ -1,0 +1,12 @@
+{% extends "events/base.html" %}
+
+{% block body %}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    {% for event in events %}
+        {% include "events/_event.html" %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,46 @@
+<div class="row" id="event_{{event.id}}">
+    <a href="#" data-reveal-id="event_reveal_{{event.id}}">
+        <div class="large-3 columns">
+            {% if event.image %}
+                <img style="height:120px;width:120px;" src="{{event.image.url}}" />
+            {% endif %}
+        </div>
+        <div class="large-9 columns">
+            <p style="word-break:hyphenate;">
+                <strong>
+                {{event.start_time.date}} <br />
+                {{event.start_time.time}} | {{event.location}} <br />
+                {{event.name}}
+                </strong>
+            </p>
+        </div>
+    </a>
+</div>
+<div id="event_reveal_{{event.id}}" class="reveal-modal">
+    <strong>
+        <div class="row" id="event_{{event.id}}">
+            <div class="large-3 columns">
+                {% if event.image %}
+                    <img style="height:120px;width:120px;" src="{{event.image.url}}" />
+                {% endif %}
+            </div>
+            <div class="large-3 columns">
+                <p style="word-break:hyphenate;">
+                    <strong>
+                    {{event.start_time.date}} <br />
+                    {{event.start_time.time}} | {{event.location}} <br />
+                    {{event.name}}
+                    </strong>
+                </p>
+            </div>
+        </div>
+    </strong>
+    <hr />
+    <br />
+    {{event.description}}
+    <br />
+    <br />
+    <a style="float:right;" href="http://www.google.com/calendar/event?action=TEMPLATE&text={{event.name}}&dates={{event.google_date_range}}&details={{event.description}}&sprop=name:CET&location={{event.location}}">
+        Add to google calandar
+    </a>
+</div>
