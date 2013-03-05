@@ -9,7 +9,7 @@
 	<div class="three columns">
 		<a class="button secondary radius" href="/profile/explore">Explore the CET network</a>
         {% if tmp_profile %}
-        <a class="button secondary radius" href="{% url company_profile tmp_profile.company.pk %}">{{ tmp_profile.company.name}}</a>
+            <a class="button secondary radius" href="{% url company_profile tmp_profile.company.pk %}">{{ tmp_profile.company.name}}</a>
         {% endif %}
 	</div>
 {% endblock %}

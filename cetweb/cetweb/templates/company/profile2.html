@@ -11,9 +11,9 @@
 		  	</div>
             <div>
                 <br />
-                {% if user.get_profile in company.profile_set.all %}
-                <a href="{% url company_edit company.pk %}" class="button">Edit Company Page</a>
-                {% endif %}
+                {# if user.get_profile in company.profile_set.all #}
+                    <a href="{% url company_edit company.pk %}" class="button">Edit Company Page</a>
+                {# endif #}
             </div>
 		  	<div>
 		    	<h5>Team</h5>

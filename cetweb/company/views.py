@@ -33,7 +33,7 @@ def job_listing_list(request):
 
 #form views
 
-@login_required
+#@login_required
 def edit_company(request,pk):
     """
         Creates a company profile.
