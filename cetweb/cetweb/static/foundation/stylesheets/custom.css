@@ -45,6 +45,7 @@
 
 /* Footer styling */
 #site-footer {
+  margin-top: 200px;
   bottom:0px;
   z-index: 100;
   color: #cecec6;
@@ -88,13 +89,9 @@ blockquote.testimonials {
   padding: 10px;
 }
 
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
-
 
 /* -----------------------------------------
-   Page Name 2
+   Home.py - Feaured Content
 ----------------------------------------- */
 
 #featuredContentDiv {
@@ -114,6 +111,7 @@ blockquote.testimonials {
 	line-height:50px;
 	font-size:50px;
 }
+
 
 
 /* -----------------------------------------

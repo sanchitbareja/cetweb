@@ -8,6 +8,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django.conf import settings
+from company.models import Company
 
 
 class Profile(models.Model):
@@ -15,8 +16,8 @@ class Profile(models.Model):
     stakeholder = models.CharField(max_length=50,choices=settings.STAKEHOLDERS,default=settings.STAKEHOLDER_DEFAULT)
     activated = models.BooleanField(default=False)
     #Founders:
-    startup_name = models.CharField(max_length=50, blank=True)
-    stratup_url = models.SlugField(max_length=50, blank=True)
+    name = models.ForeignKey('company.Company', blank=True, related_name='company_name')
+    url = models.ForeignKey('company.Company', blank=True, related_name='company_url')
     role = models.CharField(max_length=50, blank=True)
     # Mentors:
     industries = models.CharField(max_length=50, blank=True)
@@ -36,3 +37,26 @@ def create_user_profile(sender,instance,created,**kwargs):
     if created:
         p = Profile.objects.create(user=instance)
 admin.site.register(Profile)
+
+
+# class Company(models.Model):
+#     founders = models.ManyToManyField(User,blank=True)
+#     name = models.CharField(primary_key=True)
+#     url = models.URLField()
+#     logo = models.ImageField()
+#     created = models.DateField()
+#     # milestones = models.CharField()
+#     # investors = models.CharField()
+
+
+
+
+
+
+
+
+
+
+
+
+

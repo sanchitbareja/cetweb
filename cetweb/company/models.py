@@ -5,10 +5,13 @@ from django.contrib import admin
 
 class Company(models.Model):
     name = models.CharField(max_length=100)
-    members = models.ManyToManyField(User,blank=True)
+    founders = models.ManyToManyField(User,blank=True)
+    url = models.URLField()
     image = models.ImageField(upload_to="company_images",null=True,blank=True)
     pitch = models.TextField(default="",blank=True)
     video = models.URLField(null=True,blank=True,verbose_name="Video to pitch your idea")
+    milestones = models.CharField(max_length=500, blank=True)
+    investors = models.CharField(max_length=500, blank=True)
 
     def __unicode__(self):
         return self.name

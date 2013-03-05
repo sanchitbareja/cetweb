@@ -60,8 +60,8 @@ def create_job(request,company_pk=None):
     if request.method == "POST":
         form = JobForm(request.POST)
         if form.is_valid():
-            #check that this person is a member of the company
-            if request.user not in form.instance.company.members.all():
+            #check that this person is a founder of the company
+            if request.user not in form.instance.company.founders.all():
                 messages.error(request,"Cannot create job listings for a company that you are not part of.")
                 return render_to_response("company/job_form.html",{"form":form},context_instance=RequestContext(request))
             job = form.save()
