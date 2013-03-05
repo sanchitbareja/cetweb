@@ -1,34 +1,35 @@
 {% extends "base.html" %}
+{% load humanize %}
 
-{% block head_title %}[Company Name] Profile{% endblock %}
+{% block head_title %}{{company.name}}{% endblock %}
 
 {% block body %}
-
 	<div class="row" style="padding-top:15px;">
 		<div class="three columns">
 			<div>
-		    	<a href="http://www.crunchbase.com/company/flotype-2" class="th"><img src="http://www.crunchbase.com/assets/images/resized/0016/9100/169100v1-max-250x250.jpg" style="width:100%;"/></a>
+                <a href="{{company.url}}" class="th"><img src="{{company.image.url}}" style="width:100%;"/></a>
 		  	</div>
+            <div>
+                <br />
+                {% if user.get_profile in company.profile_set.all %}
+                <a href="{% url company_edit company.pk %}" class="button">Edit Company Page</a>
+                {% endif %}
+            </div>
 		  	<div>
 		    	<h5>Team</h5>
 		    	<dl>
 				  	<dt>Co-Founders</dt>
 				  	<dd>
-				    	<a href="http://www.crunchbase.com/person/darshan-shankar">Eric Zhang</a><br />
-				  		<a href="http://www.crunchbase.com/person/darshan-shankar">Darshan Shankar</a><br />
-			  			<a href="http://www.crunchbase.com/person/darshan-shankar">Sridatta Thatimpamala</a><br />
+                        {% for founder in company.profile_set.all %}
+                            <a href="http://www.crunchbase.com/person/darshan-shankar">{{founder.user.get_full_name}}</a><br />
+                        {% endfor %}
 				  	</dd>
 				</dl>
 		  	</div>
 		  	<div>
 		    	<h5>Funding</h5>
 		    	<p>
-		    		Y Combinator<br />
-		    		Reid Hoffman<br />
-		    		Another VC Firm <br />
-		    		CanT Think More Inc <br />
-		    		Get the idea <br />
-		    		Invest in Engineers <br />
+                    {{company.investors}}
 		    	</p>
 		  	</div>
 		  	<div>
@@ -42,66 +43,35 @@
 		  	</div>
 		</div>
 		<div class="nine columns" style="border-left:1px solid grey">
-			<iframe width="640" height="360" src="http://www.youtube.com/embed/t-Pr2yYz39M" frameborder="0" allowfullscreen></iframe>
+            <iframe width="640" height="360" src="{{company.video}}" frameborder="0" allowfullscreen></iframe>
 			<h4>About</h4>
-			<p>Lorem ipsum dolor sit amet, nec leo leo magna blandit suspendisse vitae, eu arcu vestibulum ac ipsum vel. Posuere montes. Mattis nulla nulla est wisi, est justo commodo neque volutpat sed, est elementum ultricies morbi eget, eu lectus ipsum in. Erat faucibus, dictumst nec, proin pariatur, fringilla non suspendisse mattis, cubilia nisl ridiculus netus porttitor eget dui. Semper erat, sapien maecenas, leo varius purus sit pede eleifend sollicitudin. Ac purus turpis. Ligula in, augue at. Sodales molestie sed ligula mollit.</p>
+            <p>{{company.pitch}}</p>
 			<h4>Updates</h4>
 			<ul class=""
 			<h4>Milestones</h4>
 			<div class="row">
 				<div class="twelve columns">
-					<div class="row">
-						<div class="four columns">
-							<blockquote class="milestone">
-							  	<p>Successfully raised Series A
-							  		<cite>21st Feb 2013</cite>
-							  	</p>
-							</blockquote>								
-						</div>
-						<div class="eight columns">
-							<div class="panel radius">
-								<p>
-								Lorem ipsum dolor sit amet, nec leo leo magna blandit suspendisse vitae, eu arcu vestibulum ac ipsum vel. Posuere montes. Mattis nulla nulla est wisi, est justo commodo neque volutpat sed, est elementum ultricies morbi eget, eu lectus ipsum in. Erat faucibus, dictumst nec
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="four columns">
-							<blockquote class="milestone">
-							  	<p>Successfully raised Series A
-							  		<cite>21st Feb 2013</cite>
-							  	</p>
-							</blockquote>								
-						</div>
-						<div class="eight columns">
-							<div class="panel radius">
-								<p>
-								Lorem ipsum dolor sit amet, nec leo leo magna blandit suspendisse vitae, eu arcu vestibulum ac ipsum vel. Posuere montes. Mattis nulla nulla est wisi, est justo commodo neque volutpat sed, est elementum ultricies morbi eget, eu lectus ipsum in. Erat faucibus, dictumst nec
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="four columns">
-							<blockquote class="milestone">
-							  	<p>Successfully raised Series A
-							  		<cite>21st Feb 2013</cite>
-							  	</p>
-							</blockquote>								
-						</div>
-						<div class="eight columns">
-							<div class="panel radius">
-								<p>
-								Lorem ipsum dolor sit amet, nec leo leo magna blandit suspendisse vitae, eu arcu vestibulum ac ipsum vel. Posuere montes. Mattis nulla nulla est wisi, est justo commodo neque volutpat sed, est elementum ultricies morbi eget, eu lectus ipsum in. Erat faucibus, dictumst nec
-								</p>
-							</div>
-						</div>
-					</div>					
+                    {% for milestone in company.milestones.all %}
+                        <div class="row">
+                            <div class="four columns">
+                                <blockquote class="milestone">
+                                    <p>{{milestone.title}}
+                                        <cite>{{milestone.date}}</cite>
+                                    </p>
+                                </blockquote>								
+                            </div>
+                            <div class="eight columns">
+                                <div class="panel radius">
+                                    <p>
+                                        {{milestone.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
 				</div>
 			</div>
 		</div>
-		
 	</div>
 {% endblock %}
 

@@ -15,13 +15,14 @@ class Profile(models.Model):
     user = models.OneToOneField(User)
     stakeholder = models.CharField(max_length=50,choices=settings.STAKEHOLDERS,default=settings.STAKEHOLDER_DEFAULT)
     activated = models.BooleanField(default=False)
+
     #Founders:
     company = models.ForeignKey(Company,blank=True,null=True)
-    role = models.CharField(max_length=50, blank=True)
+    role = models.CharField(max_length=50, blank=True,null=True)
     # Mentors:
-    industries = models.CharField(max_length=50, blank=True)
+    industries = models.CharField(max_length=50, blank=True,null=True)
     # Faculty:
-    department = models.CharField(max_length=50, blank=True)
+    department = models.CharField(max_length=50, blank=True,null=True)
 
     def __unicode__(self):
         return self.user.last_name
