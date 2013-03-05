@@ -178,7 +178,7 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
-from cetweb.settings_local import DATABASES
+# from cetweb.settings_local import DATABASES
 
 if DEBUG is True:
     class AllIPS(list):
