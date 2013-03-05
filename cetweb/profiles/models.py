@@ -16,8 +16,7 @@ class Profile(models.Model):
     stakeholder = models.CharField(max_length=50,choices=settings.STAKEHOLDERS,default=settings.STAKEHOLDER_DEFAULT)
     activated = models.BooleanField(default=False)
     #Founders:
-    name = models.ForeignKey('company.Company', blank=True, related_name='company_name')
-    url = models.ForeignKey('company.Company', blank=True, related_name='company_url')
+    company = models.ForeignKey(Company,blank=True,null=True)
     role = models.CharField(max_length=50, blank=True)
     # Mentors:
     industries = models.CharField(max_length=50, blank=True)
