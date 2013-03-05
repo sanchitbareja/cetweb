@@ -67,7 +67,7 @@ def signup(request):
     return render_to_response('profiles/signup.html', {'form': form}, context_instance=RequestContext(request))
 
 
-@login_required
+#@login_required
 def dashboard(request):
     return render_to_response('profiles/dashboard.html', context_instance=RequestContext(request))
 
