@@ -95,13 +95,13 @@ blockquote.testimonials {
 ----------------------------------------- */
 
 #featuredContentDiv {
-	background: #035A8F;
 	padding-top: 0px;
-  background-image: url('../../images/front1.jpg');
+  background:url('/site_media/static/images/donate.png') repeat; 
+  height:600px;
 }
 
 #featuredContentRight {
-	background-color:rgba(200,200,200,0.5);
+	background-color:rgba(255,255,255,0.8);
 	height: 100%;
 }
 
@@ -163,7 +163,7 @@ blockquote.testimonials {
   padding-bottom: 40px;
 
 
-
+}
 /* About Us Page */
 .header-center {
   text-align: center;
@@ -176,6 +176,9 @@ blockquote.testimonials {
 ul.vcard {
   border: 0px;
 
+}
 
-
-
+/* Events */
+.event-image {
+  height: 150px;
+}
