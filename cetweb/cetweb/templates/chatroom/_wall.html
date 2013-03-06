@@ -1,0 +1,46 @@
+{% load comments %}
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="large-2 columns">
+        <style>
+            .chatroom_button{
+                background:#ddd;
+                border:1px solid #AAA;
+                padding:15px;
+                margin:5px;
+                color:#666;
+                cursor:pointer;
+            }
+        </style>
+        <h5 class="chatroom_button">
+            AVAILABLE MENTORS (6)
+        </h5>
+        <h5 class="chatroom_button">
+            FOUNDER DIRECTORY <strong>(10 new)</strong>
+        </h5>
+        <h5 class="chatroom_button">
+            INVESTOR DIRECTORY (150)
+        </h5>
+        <h5 class="chatroom_button">
+            FOLLOWING(20)
+        </h5>
+        <h5 class="chatroom_button">
+            FOLLOWERS<strong>(5 new)</strong>
+        </h5>
+        <h5 class="chatroom_button">
+            CONTACT REQUESTS (3)
+        </h5>
+    </div>
+    <div class="large-8 columns" style="width:650px;">
+        {% get_comment_form for site as form %}
+        {% url chatroom_wall as next %}
+        {% include "comments/form.html" %}
+        <hr />
+        {% render_comment_list for site %}
+    </div>
+    <div class="large-2 columns">
+        <br />
+    </div>
+</div>

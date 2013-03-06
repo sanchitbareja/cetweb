@@ -8,8 +8,8 @@ class ProfileForm(forms.Form):
     email = forms.EmailField()
 
     #For founders only:
-    startup_name = forms.CharField()
-    startup_url = forms.CharField()
+    name = forms.CharField()
+    url = forms.CharField()
     role = forms.CharField()
     # For mentors only:
     industries = forms.CharField()

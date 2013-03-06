@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block head_title %}FAQ{% endblock %}
+
+{% block body %}
+<div data-magellan-expedition="fixed" style="padding:10px 10px 0px 10px; background-color:#eee; width:100%; text-align:center;">
+	<div class="row">
+		<div class="twelve columns">
+		<dl class="sub-nav" style="margin-bottom:0px;">
+	    	<dd data-magellan-arrival="courses"><a href="#courses">Undergraudate Courses</a></dd>
+	    	<dd data-magellan-arrival="lectureseries"><a href="#lectureseries">Lecture Series</a></dd>
+	    	<dd data-magellan-arrival="cet"><a href="#cet">CET Certification</a></dd>
+	  	</dl>
+	  </div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="current" id="courses">
+		<div data-magellan-destination="courses"></div>
+		<h4 class="header-center">Undergraduate Courses</h4>
+		<p class="content-center" style="font-style:italic;">CET courses help students gain insight into leadership, entrepreneurship,<br /> commercialization, and innovation. Taught with the input of executives and<br /> entrepreneurs, CET courses combine classroom study with experiential learning</p>
+		<p class="question">Technology Entrepreneurship</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+		<p class="question">Leadership in Technology</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+		<p class="question">Venture Lab Web 2.0</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+		<p class="question">Mobile Applications</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+		<p class="question">Patent Engineering</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+		<p class="question">BOAT-Business Opportunities in Art and Technology</p>
+		<p>Students undertake intensive study of actual business situations through rigorous case-study analysis.</p>
+	</div>
+	<hr />
+
+	<div id="lectureseries">
+		<div data-magellan-destination="lectureseries"></div>
+		<h4 class="header-center">Lecture Series</h4>
+		<p class="question">Distinguished Innovator Lecture Series</p>
+		<p>Take a one unit class and hear distinguished innovators share lessons from their own successes and failures.</p>
+		<em>Some past speakers in the Lecture Series</em>
+		<div class="row">
+			<div class="three columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" /><br />
+				<em>CEOof ABC, Bob White</em>
+			</div>
+			<div class="three columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" /><br />
+				<em>CEOof ABC, Bob White</em>
+			</div>
+			<div class="three columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" /><br />
+				<em>CEOof ABC, Bob White</em>
+			</div>
+			<div class="three columns">
+				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" /><br />
+				<em>CEOof ABC, Bob White</em>
+			</div>
+		</div>
+	</div>
+	<hr />
+
+	<div id="cet">
+		<div data-magellan-destination="cet"></div>
+		<h4 class="header-center">CET Certification</h4>
+		<em style="font-size:16px;">The 6-unit CET Concentration in Engineering Leadership empowers students to become technology leaders through classroom and hands-on study of entrepreneurship and commercialization. Students not pursuing the concentration are welcome to enroll in individual classes.</em>
+		<br /><br />
+		<a href="javascript:;" class="button" id="requirements">Requriements</a>
+		<p id="requirements-details"> This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc. This will show class requirements and etc.
+		</p>
+		<h6>How to apply</h6>
+		<p>Please submit the online application during the semester in which you will complete the concentration requirements.
+		If you have questions, please email Marcia Hickman, CET Student Services Officer (marciah@berkeley.edu).<br />
+		<a href="/faq/">FAQs about Enrollment, Courses, and Certification</a></p>
+		<p class="content-center"><a href="#" class="button">CET Certificate Application</a></p>
+	</div>
+	<hr />
+
+<script type="text/javascript">
+	$("#requirements-details").hide();
+	$("#requirements").click(function(){
+		if($("#requirements-details").css('display') == 'none'){
+			$("#requirements-details").show();
+		} else {
+			$("#requirements-details").hide();
+		}
+	});
+</script>
+
+</div>
+
+
+
+{% endblock %}

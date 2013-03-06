@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 import simplejson
 
 from forms import ProfileForm
+from company.models import Company
 
 
 # def signup(request):
@@ -45,9 +46,12 @@ def signup_helper(request):
         p = user.get_profile()
         p.stakeholder = POST['stakeholder']
         if p.stakeholder == "founder":
-            p.startup_name = POST['startup_name'];
-            p.startup_url = POST['startup_url'];
+            name = POST['name'];
+            url = POST['url'];
             p.role = POST['role']
+            c = Company.objects.create(name=name, url=url)
+            c.founders.add(p.user)
+            p.company = c
         elif p.stakeholder == "mentor":
             p.industries = POST['industries'];
         elif p.stakeholder == "faculty":
@@ -63,7 +67,7 @@ def signup(request):
     return render_to_response('profiles/signup.html', {'form': form}, context_instance=RequestContext(request))
 
 
-@login_required
+#@login_required
 def dashboard(request):
     return render_to_response('profiles/dashboard.html', context_instance=RequestContext(request))
 

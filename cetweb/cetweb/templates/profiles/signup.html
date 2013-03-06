@@ -51,14 +51,14 @@
 					    <!-- Optional fields for Founders-->
 				    <div id="for-founders">
 					    <div class="">
-					        {{ form.startup_name.errors }}
-					        <label for="startup_name">Startup Name:</label>
-					        {{ form.startup_name }}
+					        {{ form.name.errors }}
+					        <label for="name">Startup Name:</label>
+					        {{ form.name }}
 					    </div>
 					    <div class="">
-					        {{ form.startup_url.errors }}
-					        <label for="startup_url">startup url:</label>
-					        {{ form.startup_url }}
+					        {{ form.url.errors }}
+					        <label for="url">startup url:</label>
+					        {{ form.url }}
 					    </div>
 					    <div class="">
 					        {{ form.role.errors }}
@@ -138,14 +138,14 @@ $("#request_invite").click(function() {
 		data: { first_name: $("#first_name").val(),
 				last_name: $("#last_name").val(),
 				email: $("#email").val(),
-				startup_name: $("#startup_name").val(),
-				startup_url: $("#startup_url").val(),
+				name: $("#company_name").val(),
+				url: $("#company_url").val(),
 				role: $("#role").val(),
 				industries: $("#industries").val(),
 				department: $("#department").val(),
 				csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()
 			  }
-		}).done(function( returnData ) {
+		}).done(function(returnData) {
 			if(returnData['success']){
 				$('#signup').hide();
 				$('#thanks').show();
