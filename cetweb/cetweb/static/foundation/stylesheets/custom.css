@@ -60,6 +60,7 @@
 
 /* Footer styling */
 #site-footer {
+  margin-top: 200px;
   bottom:0px;
   z-index: 100;
   color: #cecec6;
