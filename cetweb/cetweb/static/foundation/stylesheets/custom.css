@@ -17,6 +17,7 @@
 
 p{
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #5A5B5D;
 }
 
 h2{
@@ -26,6 +27,15 @@ h2{
 h1{
   font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   text-transform: uppercase;
+}
+
+h3{
+  text-transform: uppercase;
+}
+
+blockquote{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #5A5B5D;
 }
 
 .button{
@@ -98,6 +108,9 @@ h1{
 	border-color: transparent transparent black transparent;
 }
 
+.top-bar a{
+  text-transform: uppercase;
+}
 .top-bar-sub-nav {
   padding:10px 10px 0px 10px; 
   background-color:#eee; 
