@@ -1,0 +1,207 @@
+{% load static from staticfiles %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>CET 2.0</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    </head>
+
+    <body>
+
+    <div id="wrap">
+        <div id="content">
+            <div id="logo"><img src="{% static 'images/Cet_logo2.png' %}"></div>
+            <div id="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
+            <div id="mail-list">
+                <form name="input" action="" method="">
+                    <div>
+                        <p>We'll send you an email as soon as we are ready</p>
+                        <input type="text" name="user" placeholder="you@example.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'you@example.com'" autocomplete="off">
+                        <div id="submit-container"><a id="submit" href="#">Submit</a></div>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+    <div id="blurb">In the meantime, we hope you enjoy this beautiful picture of Berkeley, California.</div>
+    <div id="footer">Site content © 2013 CET, inc.</div>
+    
+
+
+    <style type="text/css">
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* Sets picture in background with content on top */
+    html {
+        background: url("{% static 'images/splash.jpg' %}") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #wrap {
+        border-radius: 5px;
+        text-align: center;
+        height: 550px;
+        margin: 80px auto;
+        padding: 10px 30px;
+        width: 30%;
+        background-color: black;
+        opacity:0.6;
+        filter: alpha(opacity=60);
+        /*    font-family: 'Open Sans', sans-serif;
+        font-size: 12px;*/
+    }
+    #content {
+        margin-top: 50px;
+    }
+    #logo {
+
+    }
+    #title {
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        padding-top: 120px;
+        color: white;
+        font-size: 14px;
+    }
+    #mail-list {
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        margin-top: 20px;
+        color: white;
+    }
+    form {
+        font-size: 14px;
+    }
+    input {
+        text-align: center;
+        background:transparent;
+        border: 0px none;
+        height:20px;
+        width:160px;
+        color:white;
+        border: 0px none;
+        border-style: none;
+        
+    }
+    input:focus {
+        border: 0px none;
+        outline: none;
+    }
+    #submit-container {
+        margin-top: 70px;
+    }
+    #submit {
+        padding: 5px 25px;
+        color: black;
+        background-color: lightgray;
+        text-decoration: none;
+
+    }
+    #submit:hover {
+        background-color: white;
+    }
+    p {
+        padding: 20px;
+    }
+    #blurb {
+        margin-top: 700px;
+        text-align: center;
+        font-size: 18px;
+        color: black;
+        opacity:0.5;
+        filter: alpha(opacity=50);
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 16px;
+    }
+    #footer {
+        margin-top: 620px;
+        text-align: center;
+        color: gray;
+        background-color: black;
+        opacity:0.6;
+        filter: alpha(opacity=60);
+        font-size: 18px;
+        padding: 10px;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        font-size: 14px;
+    }
+    </style>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

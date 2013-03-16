@@ -8,7 +8,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', direct_to_template, {"template":"home.html"}, name='home'),
+    url(r'^$', direct_to_template, {"template":"splash.html"}, name='splash'),
+    url(r'^home/', direct_to_template, {"template":"home.html"}, name='home'),
     url(r'^profiles/', include('profiles.urls')),
     url(r'^company/', include('company.urls')),
     url(r'^program/', include('program.urls')),
