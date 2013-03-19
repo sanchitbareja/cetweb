@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'company',
     'events',
     'program',
+    'splash',
 )
 
 # A sample logging configuration. The only tangible logging
