@@ -1,0 +1,25 @@
+{% extends "company/base.html" %}
+
+{% block body %}
+	<div class="row">
+		<div class="twelve columns">
+			<h1 class="header-center">Portfolio</h1>
+			<p>Many companies go through the mentorship provided by CET.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div style="margin-bottom:20px;" class="twelve columns">
+			<hr/>
+		    {% for company in companies %}
+			    <div class="three columns">
+	        	  	<li style="list-style:none;">
+	        	  		<a class="th radius" href="/company/profile/{{company.id}}/">
+							<img src="{{company.image.url}}" />
+						</a>
+					</li>
+				</div>
+		    {% endfor %}
+		</div>
+	    <hr/>
+	</div>
+{% endblock %}

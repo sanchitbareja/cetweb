@@ -31,6 +31,13 @@ def job_listing_list(request):
     jobs = Job.objects.all()
     return render_to_response("company/job_listing_list.html",{"jobs":jobs},context_instance=RequestContext(request))
 
+def company_list(request):
+    """
+        Displays all companies in the database
+    """
+    companies = Company.objects.all()
+    return render_to_response("company/company_list.html",{"companies":companies},context_instance=RequestContext(request))
+
 #form views
 
 #@login_required

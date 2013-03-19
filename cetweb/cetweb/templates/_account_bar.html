@@ -21,7 +21,7 @@
               <section>
                 <ul class="right">
                     {% if user.is_authenticated %}
-                        <a href="{% url auth_logout %}" id="log" class="button">user.first_name</a>
+                        <a href="{% url auth_logout %}" id="log" class="button">{{user.username}}</a>
                     {% else %}
                         <a href="{% url auth_login %}" id="log" class="button">myCET</a>
                     {% endif %}
@@ -38,6 +38,10 @@
                   <li class="divider"></li>
                   <li>
                       <a class="active" href="/program/programs/">For Founders</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                      <a class="active" href="/company/">Portfolio</a>
                   </li>
                   <li class="divider"></li>
                   <li>

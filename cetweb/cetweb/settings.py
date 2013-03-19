@@ -97,8 +97,7 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
+TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
@@ -106,7 +105,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "program.context_processors.programs",
-    "profiles.context_processors.tmp_profile",
     "cetweb.context_processors.site",
 )
 
@@ -180,7 +178,6 @@ LOGGING = {
 #dj_database_url
 import dj_database_url
 DATABASES = {'default': dj_database_url.config(default='postgres://localhost/cetweb')}
-# from cetweb.settings_local import DATABASES
 
 if DEBUG is True:
     class AllIPS(list):
@@ -205,6 +202,6 @@ STAKEHOLDER_DEFAULT = "founder"
 AUTH_PROFILE_MODULE = "profiles.Profile"
 
 try:
-    import settings_local
-except ImportError:
+    from cetweb.settings_local import DATABASES
+except Exception:
     pass # there is no local settings file

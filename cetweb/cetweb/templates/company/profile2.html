@@ -21,7 +21,7 @@
 				  	<dt>Co-Founders</dt>
 				  	<dd>
                         {% for founder in company.profile_set.all %}
-                            <a href="http://www.crunchbase.com/person/darshan-shankar">{{founder.user.get_full_name}}</a><br />
+                            {{founder.user.get_full_name}}<br />
                         {% endfor %}
 				  	</dd>
 				</dl>

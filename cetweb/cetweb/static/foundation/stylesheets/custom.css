@@ -176,8 +176,9 @@ blockquote.testimonials {
 
 #featuredContentDiv {
 	padding-top: 0px;
-  background:url('/site_media/static/images/donate.png') repeat; 
-  height:600px;
+  background:url('/site_media/static/images/9_low.jpg') no-repeat; 
+  background-size:contain;
+  height: 800px;
 }
 
 #featuredContentRight {
