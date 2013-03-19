@@ -145,7 +145,7 @@
         background:transparent;
         border: 0px none;
         height:20px;
-        width:160px;
+        width:100%;
         color:white;
         border: 0px none;
         border-style: none;
@@ -159,6 +159,7 @@
         margin-top: 70px;
     }
     #submit {
+        width: 30%;
         padding: 5px 25px;
         padding-bottom:25px;
         color: black;
@@ -175,12 +176,11 @@
     #blurb {
         margin-top: 200px;
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
         color: black;
         opacity:0.5;
         filter: alpha(opacity=50);
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-        font-size: 28px;
     }
     #footer {
         /*margin-top: 640px;*/
@@ -199,16 +199,15 @@
     }
     </style>
 
-    <script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script>
+    <script src="{% static 'foundation/javascripts/foundation/jquery.js' %}"></script>
     <script type="text/javascript">
     $(window).load(function() {
         $('#blurb').hide();
         $('#submit').click(function() {
-            $('#wrap').hide();
+            $('#wrap').fadeOut();
             $('#blurb').fadeIn();
         });
     });
-
     </script>
 
     </body>
