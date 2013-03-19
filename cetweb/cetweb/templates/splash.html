@@ -17,24 +17,40 @@
 
     <body>
 
-    <div id="wrap">
-        <div id="content">
-            <div id="logo"><img src="{% static 'images/Cet_logo2.png' %}"></div>
-            <div id="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
-            <div id="mail-list">
-                <form name="input" action="" method="">
-                    <div>
-                        <p>We'll send you an email as soon as we are ready</p>
-                        <input type="text" name="user" placeholder="you@example.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'you@example.com'" autocomplete="off">
-                        <div id="submit-container"><a id="submit" href="#">Submit</a></div>
+    {% block wrap %}
+        <div id="wrap">
+            <div id="content">
+                <div id="logo"><img src="{% static 'images/Cet_logo2.png' %}"></div>
+                <div class="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
+                {% for message in messages %}
+                    <div class="message">
+                        {{message}}
                     </div>
-                </form>
-            </div>            
+                {% endfor %}
+                <div id="mail-list">
+                    <form name="input" method="post" action="{% url add_email %}">
+                        {% csrf_token %}
+                        <div>
+                            <p>We'll send you an email as soon as we are ready</p>
+                            <input type="text" name="email" placeholder="you@example.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'you@example.com'" autocomplete="off">
+                            <div id="submit-container"><input type="submit" id="submit" value="Submit"></input></div>
+                        </div>
+                    </form>
+                </div>            
+            </div>
         </div>
     </div>
-    <div id="blurb">In the meantime, we hope you enjoy this beautiful picture of Berkeley, California.</div>
     <div id="footer">Site content © 2013 CET, inc.</div>
+    {% endblock %}
     
+
+
+
+
+
+
+
+
 
 
     <style type="text/css">
@@ -100,15 +116,13 @@
     #wrap {
         border-radius: 5px;
         text-align: center;
-        height: 550px;
+        height: 450px;
         margin: 80px auto;
         padding: 10px 30px;
         width: 30%;
         background-color: black;
         opacity:0.6;
         filter: alpha(opacity=60);
-        /*    font-family: 'Open Sans', sans-serif;
-        font-size: 12px;*/
     }
     #content {
         margin-top: 50px;
@@ -116,9 +130,15 @@
     #logo {
 
     }
-    #title {
+    .message {
+        margin-top:20px;
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-        padding-top: 120px;
+        color: white;
+        font-size: 14px;
+    }
+    .title {
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        padding-top: 50px;
         color: white;
         font-size: 14px;
     }
@@ -135,11 +155,11 @@
         background:transparent;
         border: 0px none;
         height:20px;
-        width:160px;
+        width:100%;
         color:white;
         border: 0px none;
         border-style: none;
-        
+        font-size: 16px;
     }
     input:focus {
         border: 0px none;
@@ -149,11 +169,13 @@
         margin-top: 70px;
     }
     #submit {
+        width: 30%;
         padding: 5px 25px;
+        padding-bottom:25px;
         color: black;
         background-color: lightgray;
         text-decoration: none;
-
+        font-size:15px;
     }
     #submit:hover {
         background-color: white;
@@ -162,17 +184,19 @@
         padding: 20px;
     }
     #blurb {
-        margin-top: 700px;
+        margin-top: 200px;
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
         color: black;
         opacity:0.5;
         filter: alpha(opacity=50);
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-        font-size: 16px;
     }
     #footer {
-        margin-top: 620px;
+        /*margin-top: 640px;*/
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
         text-align: center;
         color: gray;
         background-color: black;
@@ -184,9 +208,9 @@
         font-size: 14px;
     }
     </style>
-
     </body>
 </html>
+
 
 
 

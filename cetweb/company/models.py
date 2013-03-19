@@ -7,6 +7,8 @@ class Milestone(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     date = models.DateField()
+    def __unicode__(self):
+        return self.title + " at " + str(self.data)
 admin.site.register(Milestone)
 
 class Company(models.Model):
