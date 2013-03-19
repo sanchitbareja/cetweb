@@ -40,7 +40,6 @@
             </div>
         </div>
     </div>
-    <div id="blurb">Thanks! We'll get back to you soon.</div>
     <div id="footer">Site content © 2013 CET, inc.</div>
     {% endblock %}
     
@@ -209,19 +208,6 @@
         font-size: 14px;
     }
     </style>
-
-    <script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#blurb').hide();
-        $('#submit').click(function() {
-            $('#wrap').hide();
-            $('#blurb').fadeIn();
-        });
-    });
-
-    </script>
-
     </body>
 </html>
 
