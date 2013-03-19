@@ -21,7 +21,12 @@
         <div id="wrap">
             <div id="content">
                 <div id="logo"><img src="{% static 'images/Cet_logo2.png' %}"></div>
-                <div id="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
+                <div class="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
+                {% for message in messages %}
+                    <div class="message">
+                        {{message}}
+                    </div>
+                {% endfor %}
                 <div id="mail-list">
                     <form name="input" method="post" action="{% url add_email %}">
                         {% csrf_token %}
@@ -112,7 +117,7 @@
     #wrap {
         border-radius: 5px;
         text-align: center;
-        height: 550px;
+        height: 450px;
         margin: 80px auto;
         padding: 10px 30px;
         width: 30%;
@@ -126,9 +131,15 @@
     #logo {
 
     }
-    #title {
+    .message {
+        margin-top:20px;
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-        padding-top: 120px;
+        color: white;
+        font-size: 14px;
+    }
+    .title {
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        padding-top: 50px;
         color: white;
         font-size: 14px;
     }
