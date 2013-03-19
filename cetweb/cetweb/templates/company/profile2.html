@@ -9,6 +9,10 @@
 			<div>
                 <a href="{{company.url}}" class="th"><img src="{{company.image.url}}" style="width:100%;"/></a>
 		  	</div>
+		  	<div>
+                <br />
+                <a href="{{company.url}}" class="button">Visit Company Site</a>
+            </div>
             <div>
                 <br />
                 {# if user.get_profile in company.profile_set.all #}
@@ -16,6 +20,7 @@
                 {# endif #}
             </div>
 		  	<div>
+		  		{% if companu.profile_sit.all.count %}
 		    	<h5>Team</h5>
 		    	<dl>
 				  	<dt>Co-Founders</dt>
@@ -25,6 +30,7 @@
                         {% endfor %}
 				  	</dd>
 				</dl>
+				{% endif %}
 		  	</div>
 		  	<div>
 		    	<h5>Funding</h5>
@@ -32,7 +38,7 @@
                     {{company.investors}}
 		    	</p>
 		  	</div>
-		  	<div>
+		  	<!-- <div>
 		    	<h5>Featured In</h5>
 		    	<p>
 		    		<a href="http://www.google.com">Techcrunch</a><br />
@@ -40,37 +46,41 @@
 		    		<a href="http://www.google.com">New York Times</a><br />
 		    		<a href="http://www.google.com">Forbes</a><br />
 		    	</p>
-		  	</div>
+		  	</div> -->
 		</div>
 		<div class="nine columns" style="border-left:1px solid grey">
+			{% if company.video %}
             <iframe width="640" height="360" src="{{company.video}}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
 			<h4>About</h4>
             <p>{{company.pitch}}</p>
+			{% if company.milestones.count %}
 			<h4>Updates</h4>
 			<ul class=""
 			<h4>Milestones</h4>
 			<div class="row">
 				<div class="twelve columns">
-                    {% for milestone in company.milestones.all %}
-                        <div class="row">
-                            <div class="four columns">
-                                <blockquote class="milestone">
-                                    <p>{{milestone.title}}
-                                        <cite>{{milestone.date}}</cite>
-                                    </p>
-                                </blockquote>								
-                            </div>
-                            <div class="eight columns">
-                                <div class="panel radius">
-                                    <p>
-                                        {{milestone.description}}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
+	                    {% for milestone in company.milestones.all %}
+	                        <div class="row">
+	                            <div class="four columns">
+	                                <blockquote class="milestone">
+	                                    <p>{{milestone.title}}
+	                                        <cite>{{milestone.date}}</cite>
+	                                    </p>
+	                                </blockquote>								
+	                            </div>
+	                            <div class="eight columns">
+	                                <div class="panel radius">
+	                                    <p>
+	                                        {{milestone.description}}
+	                                    </p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    {% endfor %}
 				</div>
 			</div>
+            {% endif %}
 		</div>
 	</div>
 {% endblock %}

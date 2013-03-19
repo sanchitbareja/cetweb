@@ -3,7 +3,7 @@
 <br />
 <br />
 <div class="row">
-    <div class="large-2 columns">
+    <div class="two-2 columns">
         <style>
             .chatroom_button{
                 background:#ddd;
@@ -33,14 +33,14 @@
             CONTACT REQUESTS (3)
         </h5>
     </div>
-    <div class="large-8 columns" style="width:650px;">
+    <div class="eight columns" style="width:650px;">
         {% get_comment_form for site as form %}
         {% url chatroom_wall as next %}
         {% include "comments/form.html" %}
         <hr />
         {% render_comment_list for site %}
     </div>
-    <div class="large-2 columns">
+    <div class="two columns">
         <br />
     </div>
 </div>

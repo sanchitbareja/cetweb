@@ -102,10 +102,10 @@ blockquote{
 
 /* top-bar: Mobile view customization for */
 .top-bar ul > li.toggle-topbar a {
-	border-color: black transparent transparent transparent;
+	border-color: white transparent transparent transparent;
 }
 .top-bar.expanded ul li.toggle-topbar a {
-	border-color: transparent transparent black transparent;
+	border-color: transparent transparent white transparent;
 }
 
 .top-bar a{
@@ -116,6 +116,12 @@ blockquote{
   background-color:#eee; 
   width:100%; 
   text-align:center;
+}
+
+/* Sub-nav styling */
+
+dl.sub-nav dd.active a {
+  background: rgb(107,107,107);
 }
 
 /* CET logo styling */
