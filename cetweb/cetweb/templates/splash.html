@@ -32,9 +32,17 @@
             </div>            
         </div>
     </div>
-    <div id="blurb">In the meantime, we hope you enjoy this beautiful picture of Berkeley, California.</div>
+    <div id="blurb">Thanks! We'll get back to you soon.</div>
     <div id="footer">Site content © 2013 CET, inc.</div>
     
+
+
+
+
+
+
+
+
 
 
     <style type="text/css">
@@ -107,8 +115,6 @@
         background-color: black;
         opacity:0.6;
         filter: alpha(opacity=60);
-        /*    font-family: 'Open Sans', sans-serif;
-        font-size: 12px;*/
     }
     #content {
         margin-top: 50px;
@@ -139,6 +145,7 @@
         color:white;
         border: 0px none;
         border-style: none;
+        font-size: 16px;
         
     }
     input:focus {
@@ -162,17 +169,20 @@
         padding: 20px;
     }
     #blurb {
-        margin-top: 700px;
+        margin-top: 200px;
         text-align: center;
         font-size: 18px;
         color: black;
         opacity:0.5;
         filter: alpha(opacity=50);
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-        font-size: 16px;
+        font-size: 28px;
     }
     #footer {
-        margin-top: 620px;
+        /*margin-top: 640px;*/
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
         text-align: center;
         color: gray;
         background-color: black;
@@ -185,8 +195,22 @@
     }
     </style>
 
+    <script src="{% static "foundation/javascripts/foundation/jquery.js" %}"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#blurb').hide();
+        $('#submit').click(function() {
+            $('#wrap').hide();
+            $('#blurb').fadeIn();
+
+        });
+    });
+
+    </script>
+
     </body>
 </html>
+
 
 
 
