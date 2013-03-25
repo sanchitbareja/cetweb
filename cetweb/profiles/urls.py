@@ -5,5 +5,5 @@ urlpatterns = patterns('profiles.views',
     url(r'^signup/$', 'signup', name='signup'),
     url(r'^thanks/$', 'signup_helper'),
 
-    url(r'^dashboard/$', 'dashboard'),
+    url(r'^dashboard/$', 'dashboard',name='dashboard'),
 )

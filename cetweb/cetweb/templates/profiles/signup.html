@@ -23,7 +23,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla metus commodo lacus mattis vitae malesuada magna pulvinar. Maecenas luctus sem id sem pretium eu sagittis est hendrerit. Integer at velit ac magna facilisis ultrices ut vitae tellus. Donec vestibulum tincidunt nisi non eleifend. Fusce interdum metus in tortor ullamcorper vitae mollis neque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse vel metus sagittis lacus convallis porta ut a dui.</p>
 				</div>
 			</div>
-			<form method="post"> {% csrf_token %}
+			<form method="post" action=""> {% csrf_token %}
 		    	{{ form.non_field_errors }}
 				<fieldset>
 					<p>You are a:
@@ -51,14 +51,14 @@
 					    <!-- Optional fields for Founders-->
 				    <div id="for-founders">
 					    <div class="">
-					        {{ form.name.errors }}
+					        {{ form.company_name.errors }}
 					        <label for="name">Startup Name:</label>
-					        {{ form.name }}
+					        {{ form.company_name}}
 					    </div>
 					    <div class="">
-					        {{ form.url.errors }}
+					        {{ form.company_url.errors }}
 					        <label for="url">startup url:</label>
-					        {{ form.url }}
+					        {{ form.company_url }}
 					    </div>
 					    <div class="">
 					        {{ form.role.errors }}

@@ -40,5 +40,20 @@ class Job(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('job_listing', [self.pk])
-
 admin.site.register(Job)
+
+class Mentor(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.URLField(null=True,blank=True)
+    image = models.ImageField(upload_to="company_images",null=True,blank=True)
+    email = models.EmailField()
+    companies = models.ManyToManyField(Company,blank=True)
+admin.site.register(Mentor)
+
+class Investor(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.URLField(null=True,blank=True)
+    image = models.ImageField(upload_to="investor_images",null=True,blank=True)
+    email = models.EmailField()
+    companies = models.ManyToManyField(Company,blank=True)
+admin.site.register(Investor)

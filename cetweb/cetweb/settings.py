@@ -106,6 +106,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
     "django.contrib.messages.context_processors.messages",
     "program.context_processors.programs",
     "cetweb.context_processors.site",
+    "events.context_processors.news_items",
 )
 
 ROOT_URLCONF = 'cetweb.urls'
