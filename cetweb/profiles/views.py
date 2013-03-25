@@ -1,5 +1,6 @@
 from django.shortcuts import *
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -65,6 +66,15 @@ def signup_helper(request):
 
 def signup(request):
     form = ProfileForm()
+    print form
+    if request.method=="POST":
+        print request.POST
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse("dashboard"))
+        else:
+            print form.errors
     return render_to_response('profiles/signup.html', {'form': form}, context_instance=RequestContext(request))
 
 
