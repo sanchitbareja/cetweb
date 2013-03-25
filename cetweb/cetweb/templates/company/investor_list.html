@@ -1,0 +1,32 @@
+{% extends "company/base.html" %}
+
+{% block body %}
+	<div class="row">
+		<div class="twelve columns">
+			<h1 class="header-center">Investor Directory</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div style="margin-bottom:20px;" class="twelve columns">
+			<hr/>
+		    {% for investor in investors %}
+			    <div class="three columns">
+	        	  	<li style="list-style:none;">
+	        	  		<a class="th radius" href="/company/profile/{{company.id}}/">
+                            {{investor.name}}
+						</a>
+					</li>
+                    <li style="list-style:none;">
+                        Email: {{investor.email}}
+                    </li>
+                    {% if investor.url %}
+                        <li style="list-style:none;">
+                            <a href="{{investor.url}}">Website: {{investor.url}}</a>
+                        </li>
+                    {% endif %}
+				</div>
+		    {% endfor %}
+		</div>
+	    <hr/>
+	</div>
+{% endblock %}

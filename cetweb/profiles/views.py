@@ -1,12 +1,14 @@
 from django.shortcuts import *
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 import simplejson
 
 from forms import ProfileForm
-from company.models import Company
+from company.models import Company, Mentor, Investor
+
 
 
 # def signup(request):
@@ -64,12 +66,25 @@ def signup_helper(request):
 
 def signup(request):
     form = ProfileForm()
+    print form
+    if request.method=="POST":
+        print request.POST
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse("dashboard"))
+        else:
+            print form.errors
     return render_to_response('profiles/signup.html', {'form': form}, context_instance=RequestContext(request))
 
 
 #@login_required
 def dashboard(request):
-    return render_to_response('profiles/dashboard.html', context_instance=RequestContext(request))
+    context = {
+        "mentors": Mentor.objects.all(),
+        "investors": Investor.objects.all(),
+    }
+    return render_to_response('profiles/dashboard.html', context, context_instance=RequestContext(request))
 
 
 

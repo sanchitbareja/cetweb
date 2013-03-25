@@ -14,15 +14,22 @@
                 cursor:pointer;
             }
         </style>
-        <h5 class="chatroom_button">
-            AVAILABLE MENTORS (6)
-        </h5>
-        <h5 class="chatroom_button">
-            FOUNDER DIRECTORY <strong>(10 new)</strong>
-        </h5>
-        <h5 class="chatroom_button">
-            INVESTOR DIRECTORY (150)
-        </h5>
+        <a href="{% url mentor_list %}">
+            <h5 class="chatroom_button">
+                AVAILABLE MENTORS ({{mentors.count}})
+            </h5>
+        </a>
+        <a href="{% url company_list %}">
+            <h5 class="chatroom_button">
+                FOUNDER DIRECTORY
+            </h5>
+        </a>
+        <a href="{% url investor_list %}">
+            <h5 class="chatroom_button">
+                INVESTOR DIRECTORY ({{investors.count}})
+            </h5>
+        </a>
+        <!--
         <h5 class="chatroom_button">
             FOLLOWING(20)
         </h5>
@@ -32,6 +39,7 @@
         <h5 class="chatroom_button">
             CONTACT REQUESTS (3)
         </h5>
+        -->
     </div>
     <div class="eight columns" style="width:650px;">
         {% get_comment_form for site as form %}
