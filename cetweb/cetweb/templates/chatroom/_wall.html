@@ -14,9 +14,11 @@
                 cursor:pointer;
             }
         </style>
-        <h5 class="chatroom_button">
-            AVAILABLE MENTORS (6)
-        </h5>
+        <a href="{% url mentor_list %}">
+            <h5 class="chatroom_button">
+                AVAILABLE MENTORS ({{mentors.count}})
+            </h5>
+        </a>
         <h5 class="chatroom_button">
             FOUNDER DIRECTORY <strong>(10 new)</strong>
         </h5>

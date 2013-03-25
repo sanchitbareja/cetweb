@@ -1,0 +1,32 @@
+{% extends "company/base.html" %}
+
+{% block body %}
+	<div class="row">
+		<div class="twelve columns">
+			<h1 class="header-center">Mentor Directory</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div style="margin-bottom:20px;" class="twelve columns">
+			<hr/>
+		    {% for mentor in mentors %}
+			    <div class="three columns">
+	        	  	<li style="list-style:none;">
+	        	  		<a class="th radius" href="/company/profile/{{company.id}}/">
+                            {{mentor.name}}
+						</a>
+					</li>
+                    <li style="list-style:none;">
+                        Email: {{mentor.email}}
+                    </li>
+                    {% if mentor.url %}
+                        <li style="list-style:none;">
+                            <a href="{{mentor.url}}">Website: {{mentor.url}}</a>
+                        </li>
+                    {% endif %}
+				</div>
+		    {% endfor %}
+		</div>
+	    <hr/>
+	</div>
+{% endblock %}

@@ -6,7 +6,8 @@ from django.contrib.auth.decorators import login_required
 import simplejson
 
 from forms import ProfileForm
-from company.models import Company
+from company.models import Company, Mentor
+
 
 
 # def signup(request):
@@ -69,7 +70,11 @@ def signup(request):
 
 #@login_required
 def dashboard(request):
-    return render_to_response('profiles/dashboard.html', context_instance=RequestContext(request))
+    mentors = Mentor.objects.all()
+    context = {
+        "mentors": mentors
+    }
+    return render_to_response('profiles/dashboard.html', context, context_instance=RequestContext(request))
 
 
 

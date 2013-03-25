@@ -65,12 +65,10 @@
 		<div class="four columns">
 			<h3>News</h3>
 			<hr />
-			<h6>YC Summer 2013 Funding</h6>
-			<p>Y Combinator is now accepting applications for the summer 2013 funding cycle. It will take place in Mountain View, CA from June through August 2013. Deadline to apply March 29</p>
-			<h6>YC Summer 2013 Funding</h6>
-			<p>Y Combinator is now accepting applications for the summer 2013 funding cycle. It will take place in Mountain View, CA from June through August 2013. Deadline to apply March 29</p>
-			<h6>YC Summer 2013 Funding</h6>
-			<p>Y Combinator is now accepting applications for the summer 2013 funding cycle. It will take place in Mountain View, CA from June through August 2013. Deadline to apply March 29</p>
+            {% for item in new_items %}
+                <h6>{{item.title}}</h6>
+                <p>{{item.description}}</p>
+            {% endfor %}
 		</div>
 		<div class="four columns">
 			<h3>Events</h3>
