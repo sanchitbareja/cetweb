@@ -12,16 +12,18 @@
 		    {% for mentor in mentors %}
 			    <div class="three columns">
 	        	  	<li style="list-style:none;">
-	        	  		<a class="th radius" href="/company/profile/{{company.id}}/">
+	        	  		{{mentor.name}}
+	        	  		<!-- <a class="th radius" href="/company/profile/{{company.id}}/">
                             {{mentor.name}}
-						</a>
+						</a> -->
 					</li>
                     <li style="list-style:none;">
                         Email: {{mentor.email}}
                     </li>
                     {% if mentor.url %}
                         <li style="list-style:none;">
-                            <a href="{{mentor.url}}">Website: {{mentor.url}}</a>
+                            LinkedIn:
+                            <a href="{{mentor.url}}">{{mentor.url}}</a>
                         </li>
                     {% endif %}
 				</div>

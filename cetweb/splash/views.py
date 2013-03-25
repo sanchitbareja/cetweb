@@ -20,6 +20,6 @@ def add_email(request):
             form.save()
             return HttpResponseRedirect(reverse("thanks"))
         else:
-            messages.add_message(request, messages.ERROR, 'Please give a valid email.')
+            messages.add_message(request, messages.ERROR, 'Please enter a valid email.')
     return HttpResponseRedirect(reverse("splash"))
         
