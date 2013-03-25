@@ -5,29 +5,41 @@
 {% block body %}
 <div data-magellan-expedition="fixed" class="top-bar-sub-nav">
 	<div class="row">
-		<div class="twelve columns">
+		<div class="six columns centered">
 		<dl class="sub-nav" style="margin-bottom:0px;">
 	    	<dd data-magellan-arrival="mycet"><a href="#mycet">myCET</a></dd>
 	    	<dd data-magellan-arrival="venturelab"><a href="#venturelab">Venture Lab</a></dd>
 	    	<dd data-magellan-arrival="skydeck"><a href="#skydeck">Skydeck</a></dd>
+	    	<dd data-magellan-arrival="mentors"><a href="#mentors">Mentors</a></dd>
+	    	<dd data-magellan-arrival="investors"><a href="#investors">Investors</a></dd>
+	    	<dd data-magellan-arrival="globalprograms"><a href="#globalprograms">Global Programs</a></dd>
 	  	</dl>
 	  </div>
 	</div>
 </div>
 
+<div style="margin-top:0px; height:500px;">
+	<div style="background:url('/site_media/static/images/campanile_slider.png') no-repeat; height:100%; width:100%; background-size:contain">
+		<h1 style="margin-top:0px; margin-left:10%; padding-top:200px; color:#444444;">CET Resources<br />for CAL Founders</h1>
+	</div>
+</div>
+
 <div class="row">
 
-	<div class="current" id="mycet">
+
+
+	<div id="mycet">
 		<div data-magellan-destination="mycet"></div>
 		<div class="row">
 			<div class="four columns">
 				<br /><br /><br />
-				<a href="/profiles/signup/" class="button">Request Invite</a>
+				<img src="/site_media/static/images/myCET_icon.png" style="width:200px;"><br />
 			</div>
 			<div class="eight columns">
 				<h1>myCET</h1>
 				<em>The Social Network for Berkeley Founders</em>
-				<p>This is not another Facebook. myCET is an exclusive network designed for Berkeley founders to connect with other founders, post pitches, connect with mentors and investors, showcase their products, ask for feedback, find testers, and recruit talent.</p>
+				<p>This is not another Facebook. myCET is an exclusive network designed for Berkeley founders to connect with other founders, post pitches, connect with mentors and investors, showcase their products, ask for feedback, find testers, and recruit talent.</p><br />
+				<a href="/profiles/signup/" class="button">Request Invite</a>
 			</div>
 		</div>
 	</div>
@@ -40,11 +52,11 @@
 			<div class="eight columns">
 				<h1>Venture Lab</h1>
 				<em>Technology Startup Accelerator</em>
-				<p>Venture Lab provides workspace, financial support in the form of competition prizes (up to $30,000), and access to an extensive network of experienced entrepreneurs and venture capitalists.</p>
+				<p>Venture Lab provides workspace, financial support in the form of competition prizes (up to $30,000), and access to an extensive network of experienced entrepreneurs and venture capitalists.</p><br />
+				<a href="#" class="button">Apply</a>
 			</div>
 			<div class="four columns">
-				<br /><br /><br />
-				<a href="#" class="button">Apply</a>
+				<img src="/site_media/static/images/venturelab.jpeg" style="width:300px;"><br />
 			</div>
 		</div>
 	</div>
@@ -55,21 +67,22 @@
 		<div data-magellan-destination="skydeck"></div>
 		<div class="row">
 			<div class="four columns">
-				<br /><br /><br />
-				<a href="#" class="button">Get Space</a>
+				<img src="/site_media/static/images/skydeck.png" style="width:300px;"><br />
+				
 			</div>
 			<div class="eight columns">
 				<h1>Skydeck</h1>
 				<em>10,000 sq. ft. of space for innovation and new ventures in downtown Berkeley.</em>
-				<p>Located in the penthouse of the Chase building on Shattuck with a breathtaking view of the Bay, the Skydeck is a great space for student entrepreneurs to work on their projects.</p>
+				<p>Located in the penthouse of the Chase building on Shattuck with a breathtaking view of the Bay, the Skydeck is a great space for student entrepreneurs to work on their projects.</p><br />
+				<a href="#" class="button">Get Space</a>
 			</div>
 		</div>
 	</div>
 
 	<hr />
 
-	<div id="skydeck">
-		<div data-magellan-destination="skydeck"></div>
+	<div id="mentors">
+		<div data-magellan-destination="Mentors"></div>
 		<div class="row">
 			<div class="eight columns">
 				<h1>Mentor Directory</h1>
@@ -85,8 +98,8 @@
 
 	<hr />
 
-	<div id="skydeck">
-		<div data-magellan-destination="skydeck"></div>
+	<div id="investors">
+		<div data-magellan-destination="Investors"></div>
 		<div class="row">
 			<div class="four columns">
 				<br /><br /><br />
@@ -101,6 +114,21 @@
 	</div>
 
 	<hr />
+
+	<div id="globalprograms">
+		<div data-magellan-destination="globalprograms"></div>
+		<div class="row">
+			<div class="twelve columns">
+				<h1>Global Programs</h1>
+				<em>CETʼs global courses and networks.</em>
+				<ul>
+					<li>Tsinghua-Berkeley Global Technology Entrepreneurship Center (GTE)</li>
+					<li>Berkeley Mobile International Collaborative (BMIC) with University of Barcelona</li> 
+					<li>Global Venture Lab Network</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	
 </div>

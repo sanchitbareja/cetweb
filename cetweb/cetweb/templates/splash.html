@@ -21,7 +21,7 @@
         <div id="wrap">
             <div id="content">
                 <div id="logo"><img src="{% static 'images/Cet_logo2.png' %}"></div>
-                <div class="title">We are working hard to build the most amazing and engaging UC Berkeley CET website. It will blow your mind.</div>
+                <div class="title">Innovate. Productize. Commercialize.</div>
                 {% for message in messages %}
                     <div class="message">
                         {{message}}
@@ -31,29 +31,35 @@
                     <form name="input" method="post" action="{% url add_email %}">
                         {% csrf_token %}
                         <div>
-                            <p>We'll send you an email as soon as we are ready</p>
+                            <p>Enter your email below to be an early user!</p>
                             <input type="text" name="email" placeholder="you@example.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'you@example.com'" autocomplete="off">
                             <div id="submit-container"><input type="submit" id="submit" value="Submit"></input></div>
                         </div>
                     </form>
-                </div>            
+                </div>
+            </div>
+            <div id="skip-container">
+                <a href="/home" id="skip-button">Proceed to CET's website >></a>
             </div>
         </div>
-    </div>
     <div id="footer">Site content © 2013 CET, inc.</div>
     {% endblock %}
     
-
-
-
-
-
-
-
-
-
-
     <style type="text/css">
+
+    #skip-container{
+        margin-top: 70px;
+        margin-left: 230px;
+    }
+
+    #skip-button {
+        text-decoration: none;
+        color: grey;
+    }
+
+    #skip-button:hover {
+        color: white;
+    }
 
     /* http://meyerweb.com/eric/tools/css/reset/ 
        v2.0 | 20110126
@@ -140,12 +146,13 @@
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
         padding-top: 50px;
         color: white;
-        font-size: 14px;
+        font-size: 18px;
     }
     #mail-list {
         font-family: Futura, "Trebuchet MS", Arial, sans-serif;
         margin-top: 20px;
         color: white;
+        font-size: 14px;
     }
     form {
         font-size: 14px;
@@ -153,20 +160,18 @@
     input {
         text-align: center;
         background:transparent;
-        border: 0px none;
-        height:20px;
+        border: 1px none;
+        height:30px;
         width:100%;
         color:white;
-        border: 0px none;
-        border-style: none;
-        font-size: 16px;
+        font-size: 20px;
     }
     input:focus {
         border: 0px none;
         outline: none;
     }
     #submit-container {
-        margin-top: 70px;
+        margin-top: 40px;
     }
     #submit {
         width: 30%;
