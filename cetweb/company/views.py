@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 #project
-from company.models import Company, Job, Mentor
+from company.models import Company, Job, Investor, Mentor
 from company.forms import CompanyForm, JobForm
 
 def profile(request,pk):
@@ -38,6 +38,12 @@ def company_list(request):
     companies = Company.objects.all()
     return render_to_response("company/company_list.html",{"companies":companies},context_instance=RequestContext(request))
 
+def investor_list(request):
+    """
+        Displays a list of all the investors.
+    """
+    investors = Investor.objects.all()
+    return render_to_response("company/investor_list.html",{"investors":investors},context_instance=RequestContext(request))
 def mentor_list(request):
     """
         Displays a list of all the mentors.

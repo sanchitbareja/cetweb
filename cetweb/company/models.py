@@ -47,5 +47,13 @@ class Mentor(models.Model):
     url = models.URLField(null=True,blank=True)
     image = models.ImageField(upload_to="company_images",null=True,blank=True)
     email = models.EmailField()
-    companies = models.ManyToManyField(Company)
+    companies = models.ManyToManyField(Company,blank=True)
 admin.site.register(Mentor)
+
+class Investor(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.URLField(null=True,blank=True)
+    image = models.ImageField(upload_to="investor_images",null=True,blank=True)
+    email = models.EmailField()
+    companies = models.ManyToManyField(Company,blank=True)
+admin.site.register(Investor)
