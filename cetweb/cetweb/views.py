@@ -8,10 +8,14 @@ from django.contrib import messages
 
 #project
 from events.models import Event
+from info.models import Testimonial
 
 def home(request):
     """
         Displays the job listings.
     """
-    events = Event.objects.all()
-    return render_to_response("home.html",{"events":events},context_instance=RequestContext(request))
+    context = {
+        "events": Event.objects.all(),
+        "testimonials": Testimonial.objects.all()
+    }
+    return render_to_response("home.html",context,context_instance=RequestContext(request))

@@ -101,11 +101,13 @@
 		</div>
 		<div class="four columns">
 			<h3>Testimonials</h3>
+            <a href="{% url testimonial_create %}">Add Testimonial</a>
 			<hr />
-			<blockquote>“I'd have to say it was eye opening. My original thoughts of industry and how the business world works were significantly changed after going through the courses.”<cite>Carolyn Kao</cite></blockquote>
-			<blockquote>"I'm starting a company as we speak. I always thought I would lead a company. CET opened my eyes that I could do it from an early age."<cite>Sanchit Bajeja</cite></blockquote>
-			<blockquote>“(Without CET), I would have never started my own company. And never would have gotten a job at Google."<cite>Antoine Balaresque</cite></blockquote>
-			<blockquote>“The most practical, hands-on course I've taken... Amazing."<cite>Henry Bradlow</cite></blockquote>
+            {% for testimonial in testimonials %}
+            <blockquote>{{testimonial.description}}
+                <cite>{{testimonial.name}}</cite>
+            </blockquote>
+            {% endfor %}
 		</div>
 		<hr />
 	</div>
