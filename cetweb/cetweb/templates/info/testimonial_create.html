@@ -2,8 +2,12 @@
 
 {% block body %}
     <form action="" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit">
+    	<div class="row">
+			<div class="five columns centered" style="margin-top:60px;">
+        		{% csrf_token %}
+        		{{form.as_p}}
+        		<input class="button radius" type="submit">
+        	</div>
+        </div>
     </form>
 {% endblock %}
