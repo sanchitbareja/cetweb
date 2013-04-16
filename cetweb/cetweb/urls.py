@@ -27,6 +27,7 @@ urlpatterns = patterns('',
     url(r'^faq/$', direct_to_template, {"template":"faq.html"}, name='faq'),
     url(r'^contact/$', direct_to_template, {"template":"contact.html"}, name='contact'),
     url(r'^globalprograms/$', direct_to_template, {"template":"globalprograms.html"}, name='about'),
+    url(r'^apply/$', direct_to_template, {"template":"program/apply_reveal.html"}, name='apply'),
     url(r'^comments/', include('django.contrib.comments.urls')),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -1,17 +1,10 @@
 {% extends "registration/base.html" %}
 
 {% block body %}
-	<div class="row">
-		<div class="twelve columns">
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-	    <form action="" method="post">
+	<div class="row" style="margin-top:100px;">
+		<div class="four columns centered">
+		<h3>Sign in</h3>
+	    <form action="" method="post" style="margin-top:40px;">
 	        {% csrf_token %}
 	        {{form.as_p}}
 	        <input class="button" type="submit"></input>
