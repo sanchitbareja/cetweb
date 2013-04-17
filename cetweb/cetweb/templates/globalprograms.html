@@ -105,7 +105,7 @@
 		<p>
 		If you have questions, please email Marcia Hickman, CET Student Services Officer (marciah@berkeley.edu) or check out our
 		<a href="/faq/">FAQs</a></p>
-		<p class="content-center"><a href="#apply_reveal" class="button">CET Certificate Application</a></p>
+		<p class="content-center"><a href="#apply_reveal" data-reveal-id="apply_reveal" class="button">CET Certificate Application</a></p>
 
 	</div>
 	<hr />
@@ -122,7 +122,9 @@
 </div>
 <script type="text/javascript">
     jQuery(function(){
+        console.log("HERE");
         jQuery("#apply_reveal_button").click(function(){
+            console.log("HERE");
             var alert_success = " \
                 <div id='certificate_alert' class='alert-box success'> \
                     <div id='certificate_alert_text'>Successfully applied!</div> \
