@@ -30,6 +30,9 @@ urlpatterns = patterns('',
     url(r'^apply/$', direct_to_template, {"template":"program/apply_reveal.html"}, name='apply'),
     url(r'^comments/', include('django.contrib.comments.urls')),
 
+    # ERROR PAGES
+    url(r'^construction/$', direct_to_template, {"template":"errors/construction.html"}, name='construction'),
+
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

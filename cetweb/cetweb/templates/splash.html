@@ -38,9 +38,7 @@
                     </form>
                 </div>
             </div>
-            <div id="skip-container">
-                <a href="/home" id="skip-button">Proceed to CET's website >></a>
-            </div>
+            <a href="/home" class="skip-button twelve columns">Proceed to CET's Website >></a>
         </div>
     <div id="footer">Site content © 2013 CET, inc.</div>
     {% endblock %}
@@ -102,17 +100,16 @@
         background-size: cover;
     }
 
-    #skip-container{
-        margin-top: 70px;
-        margin-left: 230px;
-    }
-
-    #skip-button {
+    .skip-button {
+        position: relative;
+        top: 50px;
+        font-size: 32px;
+        text-align: center;
         text-decoration: none;
         color: grey;
     }
 
-    #skip-button:hover {
+    .skip-button:hover {
         color: white;
     }
 
