@@ -60,18 +60,21 @@
 	</div> -->
 	
 
-	<div class="row" style="margin-top:60px;text-align:center;">
+	<div class="row" style="margin-top:40px;text-align:center;">
 		<div class="four columns">
 			<h2>News</h2>
 			<hr />
+			<div style="margin-top:40px;">
             {% for item in new_items %}
                 <h6>{{item.title}}</h6>
                 <p>{{item.description}}</p>
             {% endfor %}
+            </div>
 		</div>
 		<div class="four columns">
 			<h2>Events</h2>
 			<hr />
+			<div style="margin-top:60px;">
 			{% for event in events %}
 			<div class="row">
 				<div class="five columns">
@@ -83,11 +86,12 @@
 				</div>
 			</div>
 			{% endfor %}
+			</div>
 		</div>
 		<div class="four columns">
 			<h2>Testimonials</h2>
 			<hr />
-            <a href="{% url testimonial_create %}">Add Testimonial</a>
+            <a href="{% url testimonial_create %}" style="margin-bottom:24px;">Add Testimonial</a>
             {% for testimonial in testimonials %}
             <blockquote>{{testimonial.description}}
                 <cite>{{testimonial.name}}</cite>
