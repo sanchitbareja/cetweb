@@ -8,6 +8,7 @@
         <li class="name hide-for-medium-down">
               <a href="{% url home %}">
                   <img src="{% static "images/Cet_logo2.png" %}" id="cet_logo" style="height:50px;"/>
+                  <!-- CET -->
             </a>
         </li>
         <li class="toggle-topbar"><a href="#"></a></li>
@@ -23,7 +24,7 @@
                     {% if user.is_authenticated %}
                         <a href="/profiles/dashboard/" id="log" class="button">{{user.username}}</a>
                     {% else %}
-                        <a href="{% url auth_login %}" id="log" class="button">myCET</a>
+                        <a href="{% url auth_login %}" id="log" class="button radius">Sign in</a>
                     {% endif %}
                 </ul>
                 <ul class="right">
@@ -41,7 +42,7 @@
                   </li>
                   <li class="divider"></li>
                   <li>
-                      <a class="active" href="/company/">Portfolio</a>
+                      <a class="active" href="/company/">CET Companies</a>
                   </li>
                   <li class="divider"></li>
                   <li>
@@ -52,10 +53,10 @@
                       <a class="active" href="/donate/">Donate</a>
                   </li>
                   <li class="divider"></li>
-                  <li>
+<!--                   <li>
                       <a class="active" href="/contact/">Contact</a>
                   </li>
-                  <li class="divider"></li>
+                  <li class="divider"></li> -->
                 </ul>
               </section>
 

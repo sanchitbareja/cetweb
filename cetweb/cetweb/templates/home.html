@@ -6,45 +6,31 @@
 {% block body %}
 	<div id="featuredContentDiv">
 		<div class="row">
-			<div class="two columns">
-			</div>
-			<div class="eight columns">
-				<div id="featuredContent" style="margin-top:80px;">
-					<!-- <div>
-						<div style="padding-top: 10px;">
-					    	<h2>UC Berkeley's Finest Entrepreneurs Are Made Here</h2>
-					    </div>
-				    	<h4>We Help you Realize your Vision and  Build the Future.</h4>
-				    	<a href="#" class="button">Learn More</a>
-				  	</div> -->
-				  	<div class="current" id="mycet">
-						<div data-magellan-destination="mycet"></div>
-						<div class="row">
-							<div class="four columns">
-							</div>
-							<div class="eight columns">
-								<h2>Join the CET Network</h2>
-								<a href="/profiles/signup/" class="button">Request Invite</a>
-								<h4>A social network designed to empower UC Berkeley entrepreneurs.</h4>
-								<p>The Center for Entrepreneurship and Technology at UC Berkeley is one of the strongest communities of successful entrepreneurs in the world. It is an exclusive network designed for UC Berkeley entrepreneurs to share information, get in touch with mentors, learn from experienced faculty members, and much more.</p>
-							</div>
+			<div class="twelve columns" style="margin-top:70px;">
+				<div class="row">
+					<div class="four columns">
+					</div>
+					<div class="eight columns" id="blurb">
+						<h2 class="blurb-text">Join the CET Network</h2>
+						<h4 class="blurb-text">A social network designed to empower UC Berkeley entrepreneurs.</h4>
+						<p class="blurb-text" style="color: #666;">The Center for Entrepreneurship and Technology at UC Berkeley is one of the strongest communities of successful entrepreneurs in the world. It is an exclusive network designed for UC Berkeley entrepreneurs to share information, get in touch with mentors, learn from experienced faculty members, and much more.</p>
+						<div class="five columns centered">
+							<a href="/profiles/signup/" class="large button radius blurb-text">Request Invite</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="three columns">
-			</div>			
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row" style="margin-top:40px;">
 		<div class="current" id="mission">
-			<h1 class="header-center">Our Mission</h1>
-			<h5 class="content-center">Through teaching, programs, and research, CET equips engineers and scientists with the skills to<br /> innovate, productize, and commercialize technology in the global economy.</h5>
+			<h2 class="header-center">Our Mission</h2>
+			<h4 class="content-center" style="margin-top:20px;">Through teaching, programs, and research, CET equips engineers and scientists with the skills to innovate, productize, and commercialize technology in the global economy.</h4>
 		</div>	
 	</div>
 
-	<!-- <div class="row">
+<!-- 	<div class="row">
 		<div class="three columns">
 			<a href="/profiles/signup/">
 				<img style="width:300px;" src="/site_media/static/images/myCET_icon.png">
@@ -74,9 +60,9 @@
 	</div> -->
 	
 
-	<div class="row">
+	<div class="row" style="margin-top:60px;text-align:center;">
 		<div class="four columns">
-			<h3>News</h3>
+			<h2>News</h2>
 			<hr />
             {% for item in new_items %}
                 <h6>{{item.title}}</h6>
@@ -84,7 +70,7 @@
             {% endfor %}
 		</div>
 		<div class="four columns">
-			<h3>Events</h3>
+			<h2>Events</h2>
 			<hr />
 			{% for event in events %}
 			<div class="row">
@@ -99,20 +85,38 @@
 			{% endfor %}
 		</div>
 		<div class="four columns">
-			<h3>Testimonials</h3>
-            <a href="{% url testimonial_create %}">Add Testimonial</a>
+			<h2>Testimonials</h2>
 			<hr />
+            <a href="{% url testimonial_create %}">Add Testimonial</a>
             {% for testimonial in testimonials %}
             <blockquote>{{testimonial.description}}
                 <cite>{{testimonial.name}}</cite>
             </blockquote>
             {% endfor %}
 		</div>
-		<hr />
 	</div>
+
+
+
+	
+	<style type="text/css">
+	#blurb {
+		background-color:rgba(255,255,255,0.4);
+		border-radius: 3px;
+		padding: 40px;
+	}
+	.blurb-text {
+		opacity: 1;
+		color: #333;
+	}
+
+	</style>
+
+
+
     <script type='text/javascript'>
 	   $(window).load(function() {
-	       $('#featuredContent').orbit({ fluid:'16x5', directionalNav: false, bullets:true, bulletsThumbs:true, });
+	       // $('#featuredContent').orbit({ fluid:'16x5', directionalNav: false, bullets:true, bulletsThumbs:true, });
 	 });
 	</script>
 

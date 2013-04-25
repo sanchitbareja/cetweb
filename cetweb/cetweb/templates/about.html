@@ -1,27 +1,28 @@
 {% extends "base.html" %}
+{% load comments %}
 
 {% block head_title %}About{% endblock %}
 
 {% block body %}
 <div data-magellan-expedition="fixed" class="top-bar-sub-nav">
 	<div class="row">
-		<div class="five columns centered">
+		<div class="six columns centered">
 		<dl class="sub-nav" style="margin-bottom:0px;">
 	    	<dd data-magellan-arrival="mission"><a href="#mission">Mission</a></dd>
 	    	<dd data-magellan-arrival="staff"><a href="#staff">Staff</a></dd>
 	    	<dd data-magellan-arrival="founder"><a href="#founder">Founder Stories</a></dd>
 	    	<dd data-magellan-arrival="getinvolved"><a href="#getinvolved">Get Involved</a></dd>
-	    	<dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd>
+	    	<!-- <dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd> -->
 	  	</dl>
 	  </div>
 	</div>
 </div>
 
-<div id="mission" style="margin-top:0px; height:600px;">
+<div id="mission" style="margin-top:48px; height:600px;">
 	<div data-magellan-destination="mission"></div>
 	<div style="background:url('/site_media/static/images/ChaseBuilding.png') no-repeat; height:100%; width:100%; background-size:contain;">
-		<h1 style="margin-top:0px; margin-left:30px; padding-top:200px;">Our Mission</h1>
-		<h4 style="margin-left:30px;">The UC Berkeley CET aims to provide Berkeley founders with<br />the tools to innovate, productize, & commercialize their big ideas.</h4>
+		<h1 style="margin-top:0px; margin-left:80px; padding-top:250px;">Our Mission</h1>
+		<h4 style="margin-left:80px;">The UC Berkeley CET aims to provide Berkeley founders with<br />the tools to innovate, productize, & commercialize their big ideas.</h4>
 	</div>
 </div>
 
@@ -117,10 +118,9 @@
 			</div>
 		</div>
 	</div>
-	<hr />
-	<div id="founder">
+	<div id="founder" style="padding-top:120px;">
 		<div data-magellan-destination="founder"></div>
-		<h1 class="header-center">CET Founder Stories</h1>
+		<h1 class="header-center" style="padding-bottom:80px;">CET Founder Stories</h1>
 		<div class="row">
 			<div class="two columns">
 				<img src="https://twimg0-a.akamaihd.net/profile_images/2618216020/mh52xpuarmqu3zvb0s9o.jpeg" style="width:100%;" />
@@ -146,10 +146,10 @@
 			</div>
 		</div>
 	</div>
-	<hr />
-	<div id="getinvolved">
+
+	<div id="getinvolved" style="margin-top:120px;">
 		<div data-magellan-destination="getinvolved"></div>
-		<h1 class="header-center">Get Involved</h1>
+		<h1 class="header-center" style="padding-bottom:80px;">Get Involved</h1>
 		<div class="row">
 			<div class="twelve columns">
 				<p>
@@ -160,6 +160,7 @@
 		</div>
 	</div>
 	<hr />
+	{% comment %}
 	<div id="sponsors">
 		<div data-magellan-destination="sponsors"></div>
 		<h1 class="header-center">Sponsors</h1>
@@ -216,8 +217,8 @@
 			</div>
 		</div>
 	</div>
+	{% endcomment %}
 </div>
-
 
 
 {% endblock %}

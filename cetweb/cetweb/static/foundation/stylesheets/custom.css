@@ -78,18 +78,11 @@ blockquote{
 /*top-bar customization */
 .top-bar{
     margin-bottom: 0px;
-    /*border-bottom: 1px solid black;*/
-    box-shadow: 0px 2px 7px black;
-    background: #646464; /* Old browsers */
-    background: -moz-linear-gradient(top, #646464 0%, #000000 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#646464), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #646464 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #646464 0%,#000000 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #646464 0%,#000000 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #646464 0%,#000000 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#646464', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    box-shadow: -2px 2px 4px black;
+    background-color: #333;
 }
-.top-bar ul {
+.top-bar a {
+  color: #333;
 }
 .top-bar #log {
 	color: #011b2b;
@@ -97,7 +90,9 @@ blockquote{
 	margin-left: 20px;
 }
 .top-bar #log:hover {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
+  color: white;
+  text-shadow: none;
 }
 
 /* top-bar: Mobile view customization for */
@@ -110,18 +105,35 @@ blockquote{
 
 .top-bar a{
   text-transform: uppercase;
+  color: #333;
 }
 .top-bar-sub-nav {
-  padding:10px 10px 0px 10px; 
+  position: fixed;
+  padding: 15px 0px 0px 10px; 
   background-color:#eee; 
   width:100%; 
   text-align:center;
+  font-weight: bold;
+  box-shadow: -2px 2px 2px #666;
 }
 
 /* Sub-nav styling */
 
+dl.sub-nav dd {
+  font-weight: bold;
+  background: none;
+  padding: 0px 10px 0px 10px; 
+}
+
+dl.sub-nav dd a {
+  color: #333;
+  background: none;
+}
+
 dl.sub-nav dd.active a {
-  background: rgb(107,107,107);
+  background: none;
+  color: #333;
+  text-decoration: underline;
 }
 
 /* CET logo styling */
@@ -181,10 +193,9 @@ blockquote.testimonials {
 ----------------------------------------- */
 
 #featuredContentDiv {
-	padding-top: 0px;
-  background:url('/site_media/static/images/9_low.jpg') no-repeat; 
-  background-size:contain;
-  height: 800px;
+  width: 100%;
+  background:url('/site_media/static/images/9_low.jpg'); 
+  height: 500px;
 }
 
 #featuredContentRight {
