@@ -38,10 +38,15 @@ class CETCourse(models.Model):
 admin.site.register(CETCourse)
 
 class CertificateApplication(models.Model):
+    student_id = models.CharField(max_length=100)
     full_name = models.CharField(max_length=200)
+    phone_number = models.CharField(max_length=100)
     email = models.EmailField()
-    courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken",blank=False)
+    major = models.CharField(max_length=200)
+    courses = models.ManyToManyField(CETCourse,verbose_name="CET courses taken",blank=True)
+    address = models.CharField(max_length=200)
     GPA = models.FloatField(blank=False)
+    comments = models.TextField(blank=True,null=True)
     def __unicode__(self):
         return self.full_name + ", GPA:" + str(self.GPA)
 
