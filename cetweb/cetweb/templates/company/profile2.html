@@ -6,9 +6,11 @@
 {% block body %}
 	<div class="row" style="padding-top:15px;">
 		<div class="three columns">
-			<div>
-                <a href="{{company.url}}" class="th"><img src="{{company.image.url}}" style="width:100%;"/></a>
-		  	</div>
+            {% if company.image %}
+                <div>
+                    <a href="{{company.url}}" class="th"><img src="{{company.image.url}}" style="width:100%;"/></a>
+                </div>
+            {% endif %}
 		  	<div>
                 <br />
                 <a href="{{company.url}}" class="button">Visit Company Site</a>

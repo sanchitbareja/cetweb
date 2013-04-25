@@ -14,7 +14,11 @@
 			    <div class="three columns">
 	        	  	<li style="list-style:none;">
 	        	  		<a class="th radius" href="/company/profile/{{company.id}}/">
-							<img src="{{company.image.url}}" />
+                            {% if company.image %}
+                                <img src="{{company.image.url}}" />
+                            {% else %}
+                                {{company.name}}
+                            {% endif %}
 						</a>
 					</li>
 				</div>

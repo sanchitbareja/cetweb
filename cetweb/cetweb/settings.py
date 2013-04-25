@@ -105,6 +105,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "program.context_processors.programs",
+    "program.context_processors.apply_form",
     "cetweb.context_processors.site",
     "events.context_processors.news_items",
 )

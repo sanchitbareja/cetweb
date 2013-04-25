@@ -11,7 +11,8 @@ from cetweb.views import home
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', direct_to_template, {"template":"splash.html"}, name='splash'),
+    #url(r'^$', direct_to_template, {"template":"splash.html"}, name='splash'),
+    url(r'^$', home, name='home'),
     url(r'^home/', home, name='home'),
     url(r'^profiles/', include('profiles.urls')),
     url(r'^company/', include('company.urls')),
