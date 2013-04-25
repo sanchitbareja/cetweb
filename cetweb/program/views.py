@@ -46,5 +46,5 @@ def program_certificate_apply(request):
         data['success'] = True
         data['message'] = "Thanks! We will get back to you shortly."
     else:
-        data['message'] = "Please correctly fill out the form."
+        data['message'] = str(form.errors)
     return HttpResponse(json.dumps(data), mimetype="application/json")

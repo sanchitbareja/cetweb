@@ -122,7 +122,6 @@
 </div>
 <script type="text/javascript">
     jQuery(function(){
-        console.log("HERE");
         jQuery("#apply_reveal_button").click(function(){
             console.log("HERE");
             var alert_success = " \
@@ -143,6 +142,7 @@
                 url:"{% url program_certificate_apply %}", 
                 data: $("#apply_reveal_form").serialize(),
                 success: function(data){
+                    console.log(data);
                     if(data.success==true)
                     {
                         jQuery("#certificate").prepend(alert_success);
