@@ -74,7 +74,7 @@
 		<div class="four columns">
 			<h2>Events</h2>
 			<hr />
-			<div style="margin-top:60px;">
+			<div style="margin-top:40px;">
 			{% for event in events %}
 			<div class="row">
 				<div class="five columns">
@@ -93,7 +93,7 @@
 			<hr />
             <a href="{% url testimonial_create %}" style="margin-bottom:24px;">Add Testimonial</a>
             {% for testimonial in testimonials %}
-            <blockquote>{{testimonial.description}}
+            <blockquote id="blq">{{testimonial.description}}
                 <cite>{{testimonial.name}}</cite>
             </blockquote>
             {% endfor %}
@@ -112,6 +112,9 @@
 	.blurb-text {
 		opacity: 1;
 		color: #333;
+	}
+	#blq {
+		border: none;
 	}
 
 	</style>
